@@ -530,8 +530,8 @@ h3 {
   background-color: var(--accent-color);
 }
 
-.logo-address {
-  /* min-width: 231px; */
+.address-list {
+  min-width: 231px;
 }
 
 
