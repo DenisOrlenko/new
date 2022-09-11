@@ -1,2 +1,3 @@
-# new
-добавление цитаты на разных языках
+# goit-markup-hw-03
+
+# flex, margin, padding
