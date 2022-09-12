@@ -14,8 +14,9 @@
   /* Decoration */
   --border-under-header: #ececec;
   --border-under-item: #eeeeee;
-  --shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  --shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  --shadow-example: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
   /* Geometry */
   /* отступ между элементами списка (кроме меню навигации) */
@@ -219,17 +220,16 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   max-width: 1600px;
-  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-
-  text-align: center;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/main/hero/hero-bg.jpg');
   background-color: #c4c4c4;
-
   background-position: center;
   /* background-repeat: no-repeat;
   background-size: cover; */
@@ -254,7 +254,10 @@ h3 {
 
 /* button применение формления к кнопке */
 .hero-button {
+  display: block;
   padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
 
   font-family: inherit;
   font-weight: 700;
@@ -358,8 +361,9 @@ h3 {
 .team-item {
   background-color: var(--secondary-text-color);
 
-  box-shadow: var(--shadow);
-  border-radius: 0px 0px 4px 4px;
+  box-shadow: var(--shadow-team);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px
 }
 
 .team-content {
@@ -405,8 +409,8 @@ h3 {
   border-radius: 50%;
 }
 
-.social-link:hover,
-.social-team-link:focus {
+.social-item > .social-link:hover,
+.social-item > .social-link:focus {
   background-color: var(--accent-color);
   fill: #ffffff;
 }
@@ -457,6 +461,10 @@ h3 {
   color: var(--secondary-text-color);
 }
 
+.address-list {
+  min-width: 231px;
+}
+
 .city-item {
   margin-bottom: 6px;
 }
@@ -498,11 +506,6 @@ h3 {
   margin-left: 70px;
 }
 
-/* .page-footer .social-list {
-  display: flex;
-  gap: 10px;
-} */
-
 .social-thumb .title {
   margin-bottom: 20px;
 
@@ -513,25 +516,9 @@ h3 {
   color: var(--primary-bg-color);
 }
 
-.social-thumb .link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-
+.social-thumb .social-link {
   fill: var(--primary-bg-color);
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-
-.social-thumb .link:hover,
-.social-thumb .link:focus {
-  background-color: var(--accent-color);
-}
-
-.address-list {
-  min-width: 231px;
 }
 
 
@@ -592,6 +579,11 @@ h3 {
 
 .example-item {
   text-align: center;
+}
+
+.example-item:hover,
+.example-item:focus {
+  box-shadow: var(--shadow-example);
 }
 
 .example-content {

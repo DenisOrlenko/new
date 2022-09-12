@@ -33,9 +33,23 @@
       </nav>
       <!-- КОНТАКТЫ -->
       <ul class="contact list">
-        <li class="contact-item"><a href="mailto:info@devstudio.com" class="link" lang="en">info@devstudio.com</a></li>
-        <li class="contact-item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
-      </ul>
+          <li class="contact-item">
+            <a href="mailto:info@devstudio.com" class="link" lang="en">
+              <svg class="contact-icon" width="16" height="12">
+                <use href="./images/sprite.svg#icon-envelope-hover"></use>
+              </svg>
+              info@devinfo@devstudio.com
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="tel:+380961111111" class="link">
+              <svg class="contact-icon" width="10" height="16">
+                <use href="./images/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
     </div>
   </header>
 
@@ -133,26 +147,65 @@
   <!-- Футер -->
   <footer class="page-footer">
     <div class="container">
-      <a class="logo link" href="./index.html" lang="en">Web<span class="accent white">Studio</span></a>
 
-      <address class="footer-address">
-        <ul class="address-list list">
-          <li class="city-item item">
-            <a class="city-link link"
-              href="https://www.google.com/maps/d/viewer?mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.42732700000001%2C30.538092&z=17"
-              target="_blank" rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26</a>
+      <div class="logo-address">
+        <a class="logo link" href="./index.html" lang="en">Web<span class="accent white">Studio</span></a>
+
+        <address>
+          <ul class="address-list list">
+            <li class="city-item item">
+              <a class="city-link link"
+                href="https://www.google.com/maps/d/viewer?mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.42732700000001%2C30.538092&z=17"
+                target="_blank" rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26</a>
+            </li>
+
+            <li class="mail-item item">
+              <a href="mailto:info@example.com" class="mail-link link" lang="en">info@example.com</a>
+            </li>
+
+            <li class="phone-item item">
+              <a href="tel:+380991111111" class="phone-link link">+38 099 111 11 11</a>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="social-thumb">
+        <h3 class="title">Приєднуйтесь</h3>
+        <ul class="social-list list">
+          <li class="social-item">
+            <a class="social-link" href="https://www.instagram.com">
+              <svg class="social-icon" width="20" height="20" aria-label="Посилання на Інстаграм">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
 
-          <li class="mail-item item">
-            <a href="mailto:info@example.com" class="mail-link link" lang="en">info@example.com</a>
+          <li class="social-item">
+            <a class="social-link" href="https://twitter.com">
+              <svg class="social-icon" width="20" height="20" aria-label="Посилання на Твіттер">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
 
-          <li class="phone-item item">
-            <a href="tel:+380991111111" class="phone-link link">+38 099 111 11 11</a>
+          <li class="social-item">
+            <a class="social-link" href="https://www.facebook.com">
+              <svg class="social-icon" width="20" height="20" aria-label="Посилання на Фейсбук">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a class="social-link" href="https://ua.linkedin.com">
+              <svg class="social-icon" width="20" height="20" aria-label="Посилання на Лінкедін">
+                <use href="./images/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-      </address>
-    </div>
+      </div>
   </footer>
 </body>
 
