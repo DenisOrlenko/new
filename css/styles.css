@@ -6,11 +6,18 @@
   --title-text-color: #212121;
   --logo-black-color: #000000;
   --accent-color: #2196f3;
-  --hero-button-background-color: #188CE8;
+  --hero-overlay: rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4);
+  --hero-bg-color: #c4c4c4;
+  --hero-button-bg-color: #188CE8;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
+  --backdrop-bg: rgba(0, 0, 0, 0.2);
 
+  /* svg */
+  --primary-svg-fill: #afb1b8;
+  --footer-svg-bg-color: rgba(255, 255, 255, 0.1);
   /* Decoration */
   --border-under-header: #ececec;
   --border-under-item: #eeeeee;
@@ -21,6 +28,8 @@
   --shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   --shadow-example: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  /* transition (css-переходы) */
+  --duration-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Geometry */
   /* отступ между элементами списка (кроме меню навигации) */
@@ -110,8 +119,18 @@ h3 {
 }
 
 /* -----------------HEADER-------------------------- */
+/* Серая линия под HEADER - relative */
 .page-header {
+  position: relative;
+}
+
+/* Серая линия под HEADER - absolute */
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
   border-bottom: 1px solid var(--border-under-header);
+  width: 100%;
 }
 
 .page-header .container {
@@ -131,19 +150,12 @@ h3 {
 
 /* .logo-web - синий логотип */
 .logo {
-  display: inline-block;
-
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
-}
-
-/* приидание высоты по родительскому тегу */
-.accent {
-  display: inline-block;
 }
 
 /* WebStudio - черный */
@@ -158,8 +170,14 @@ h3 {
   margin-left: 93px;
 }
 
+/* Подчеркивание текущей страницы - relative */
+.site-nav > .item {
+  position: relative;
+}
+
 /* site-nav цвет списка ссылок */
 .site-nav .link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -169,6 +187,8 @@ h3 {
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+
+  transition: color var(--duration-timing-function);
 }
 
 /* site-nav цвет ссылки при наведении */
@@ -177,9 +197,24 @@ h3 {
   color: var(--accent-color);
 }
 
-/* current - Позиционирование открытой ссылки на текущей странице*/
+/* current - Позиционирование открытой ссылки на текущей странице - задаю цвет текста*/
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+/* Подчеркивание текущей страницы - absolute */
+.link.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .contact {
@@ -200,8 +235,9 @@ h3 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--primary-text-color);
+
+  transition: color var(--duration-timing-function);
 }
 
 .contact-icon {
@@ -220,13 +256,14 @@ h3 {
 /* фон Героя */
 .hero {
   max-width: 1600px;
-  /* margin-left: auto; */
-  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: linear-gradient(var(--hero-overlay)),
       url('../images/main/hero/hero-bg.jpg');
-  background-color: #c4c4c4;
+  background-color: var(--hero-bg-color);
   background-position: center;
   /* background-repeat: no-repeat;
   background-size: cover; */
@@ -251,27 +288,48 @@ h3 {
 
 /* button применение формления к кнопке */
 .hero-button {
-  display: block;
   padding: 10px 32px;
-  margin-left: auto;
-  margin-right: auto;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+
   cursor: pointer;
-  border-style: none;
+  border-color: transparent;
   box-shadow: var(--shadow-hero-button);
   border-radius: 4px;
-}
 
+  transition: background-color var(--duration-timing-function);
+}
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--hero-button-background-color);
-  box-shadow: var(--shadow-hero-button);
+  background-color: var(--hero-button-bg-color);
+}
+
+/* modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--backdrop-bg);
+
+  opacity: 1;
+  transition: opacity var(--duration-timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* --------------------SECTION-2------------------- */
@@ -340,6 +398,29 @@ h3 {
   gap: var(--list-gap);
 }
 
+/* Позиционирование заголовка с фоном перед изображением - relative */
+.versions-item {
+  position: relative;
+}
+
+.versions-item .title {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-bottom: 0;
+
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
 /* --------------------SECTION-4------------------- */
 /* фон к section */
 .team {
@@ -348,7 +429,6 @@ h3 {
 
 .team-list {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--list-gap);
 }
 
@@ -398,7 +478,7 @@ h3 {
   width: 44px;
   height: 44px;
 
-  fill: #afb1b8;
+  fill: var(--primary-svg-fill);
 
   border-radius: 50%;
 }
@@ -406,7 +486,7 @@ h3 {
 .social-item > .social-link:hover,
 .social-item > .social-link:focus {
   background-color: var(--accent-color);
-  fill: #ffffff;
+  fill: var(--primary-bg-color);
 }
 
 /* client */
@@ -422,9 +502,9 @@ h3 {
   width: 170px;
   height: 92px;
 
-  fill: #afb1b8;
+  fill: var(--primary-svg-fill);
 
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--primary-svg-fill);
   border-radius: 4px;
 }
 
@@ -449,10 +529,6 @@ h3 {
   align-items: baseline;
 }
 
-.page-footer .logo {
-  margin-bottom: 20px;
-}
-
 /* Studio - белый цвет */
 .logo .accent.white {
   color: var(--secondary-text-color);
@@ -460,6 +536,7 @@ h3 {
 
 .address-list {
   min-width: 231px;
+  margin-top: 20px;
 }
 
 .city-item {
@@ -514,8 +591,8 @@ h3 {
 }
 
 .social-thumb .social-link {
-  fill: var(--primary-bg-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--secondary-text-color);
+  background-color: var(--footer-svg-bg-color);
 }
 
 

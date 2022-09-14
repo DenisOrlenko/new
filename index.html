@@ -35,7 +35,7 @@
           <ul class="site-nav list">
             <li class="item"><a href="" class="link current">Студія</a></li>
             <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
-            <li class="item"><a href="" class="link">Контакти</a></li>
+            <li class="item"><a href="./contacts.html" class="link">Контакти</a></li>
           </ul>
         </nav>
         <!-- КОНТАКТЫ -->
@@ -65,7 +65,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -125,7 +125,9 @@
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="versions-list list">
+
             <li class="versions-item">
+              <h3 class="title">Десктопні додатки</h3>
               <img
                 class="image"
                 src="./images/main/versions/desktop.jpg"
@@ -134,7 +136,9 @@
                 alt="Розробка додатків для комп'ютера"
               />
             </li>
+
             <li class="versions-item">
+              <h3 class="title">Мобільні додатки</h3>
               <img
                 class="image"
                 src="./images/main/versions/mobile.jpg"
@@ -143,7 +147,9 @@
                 alt="Розробка додатків для мобільної версії"
               />
             </li>
+
             <li class="versions-item">
+              <h3 class="title">Дизайнерські рішення</h3>
               <img
                 class="image"
                 src="./images/main/versions/tablet.jpg"
@@ -471,5 +477,17 @@
           </ul>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close" data-modal-close>
+          <svg class="icon" width="11" height="11">
+            <use href="./images/svg/sprite.svg#icon-modal-button"></use>
+          </svg>
+        </button>
+      </div>
+
+    <!-- script-modal -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
