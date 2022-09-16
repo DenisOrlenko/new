@@ -322,17 +322,13 @@ h3 {
   background-color: var(--backdrop-bg);
 
   opacity: 1;
-  transition: opacity var(--duration-timing-function);
+  transition: opacity var(--duration-timing-function), visibility var(--duration-timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  opacity: 0;
 }
 
 .modal {
@@ -349,11 +345,11 @@ h3 {
   padding: 30px;
 
   background-color: var(--primary-bg-color);
+
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
+  }
 
-  transition: opacity var(--duration-timing-function);
-}
 
 .modal .button-close {
   position: absolute;
@@ -369,10 +365,21 @@ h3 {
 
   padding: 7px 7px 8px 8px;
 
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
+
+.button-close .icon {
+  transition: fill var(--duration-timing-function);
+}
+.button-close .icon:hover,
+.button-close .icon:focus {
+  fill: var(--accent-color);
+}
+
 
 /* --------------------SECTION-2------------------- */
 /* применение ЗАГОЛОВКА к однотипным секциям, в которых одинаковый цвет заголовка */
@@ -533,6 +540,11 @@ h3 {
   fill: var(--primary-bg-color);
 }
 
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  transition: background-color var(--duration-timing-function), fill var(--duration-timing-function);
+}
+
 /* client */
 .clients-list {
   display: flex;
@@ -559,6 +571,11 @@ h3 {
   fill: var(--accent-color);
 
   border-color: var(--accent-color);
+}
+
+.clients-link:hover .icon,
+.clients-link:focus .icon {
+  transition: fill var(--duration-timing-function);
 }
 
 /* -----------------------ФУТЕР---------------- */
