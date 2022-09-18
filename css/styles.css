@@ -348,8 +348,7 @@ h3 {
 
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
-  }
-
+}
 
 .modal .button-close {
   position: absolute;
@@ -379,7 +378,6 @@ h3 {
 .button-close .icon:focus {
   fill: var(--accent-color);
 }
-
 
 /* --------------------SECTION-2------------------- */
 /* применение ЗАГОЛОВКА к однотипным секциям, в которых одинаковый цвет заголовка */
