@@ -433,18 +433,24 @@
             </a>
           </li>
         </ul>
-
-        <form class="sign-up-form" action="#">
-          <div class="sign-up-field" role="group">
-            <input class="sign-up-input" name="sign-up-field" type="text" placeholder="Email" id="sign-up">
-            <button class="sign-up-button" type="submit">Подписаться
-              <svg class="sign-up-icon" width="24" height="24">
-                <use href="./images/svg/icons.svg#icon-send-button"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
       </div>
+
+
+      <form class="sign-up-form" action="#">
+        <div class="sign-up-field" role="group">
+          <label class="sign-up-label">
+            Підпишіться на розсилку
+            <input class="sign-up-input" name="sign-up-field" type="text" placeholder="Email">
+          </label>
+        </div>
+        <!-- <input class="sign-up-input" name="sign-up-field" type="text" placeholder="Email" id="sign-up"> -->
+        <button class="sign-up-button button" type="submit">Підписатися
+          <svg class="sign-up-icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-send-button"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
   </footer>
 
   <div class="backdrop is-hidden" data-modal>
