@@ -17,9 +17,13 @@
   /* svg */
   --primary-svg-fill: #afb1b8;
   --footer-svg-bg-color: rgba(255, 255, 255, 0.1);
+  --modal-svg-fill: #212121;
   /* Decoration */
+  /* border */
   --border-under-header: #ececec;
   --border-under-item: #eeeeee;
+  --modal-border: rgba(33, 33, 33, 0.2);
+  /* shadow */
   --shadow-hero-button: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --shadow-portfolio-button: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -29,6 +33,7 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
   /* transition (css-переходы) */
   --duration-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -69,7 +74,8 @@ h4,
 h5,
 h6,
 ul,
-p {
+p,
+pre {
   padding: 0;
   margin: 0;
 }
@@ -115,6 +121,28 @@ h3 {
 .image {
   display: block;
   max-width: 100%;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
+
+  box-shadow: var(--shadow-hero-button);
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: var(--accent-color);
+
+  transition: background-color var(--duration-timing-function);
 }
 
 /* -----------------HEADER-------------------------- */
@@ -259,7 +287,6 @@ h3 {
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   background-image: linear-gradient(var(--hero-overlay)), url('../images/main/hero/hero-bg.jpg');
   background-color: var(--hero-bg-color);
   background-position: center;
@@ -286,22 +313,8 @@ h3 {
 
 /* button применение формления к кнопке */
 .hero-button {
-  padding: 10px 32px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  color: var(--secondary-text-color);
-  background-color: var(--accent-color);
-
-  cursor: pointer;
-  border-color: transparent;
-  box-shadow: var(--shadow-hero-button);
-  border-radius: 4px;
-
-  transition: background-color var(--duration-timing-function);
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .hero-button:hover,
@@ -342,7 +355,7 @@ h3 {
 
   /* margin-left: auto;
   margin-right: auto; */
-  padding: 30px;
+  padding: 40px;
 
   background-color: var(--primary-bg-color);
 
@@ -379,6 +392,157 @@ h3 {
   fill: var(--accent-color);
 }
 
+.modal-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+/* -----------modal-form--------- */
+.modal-form-list {
+  margin-bottom: 10px;
+}
+
+.modal-form-item {
+  position: relative;
+}
+
+.modal-form-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.modal-form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.modal-form-input {
+  padding: 10px 12px 10px 42px;
+  width: 100%;
+
+  /* margin-top: 4px; */
+
+  border: 1px solid var(--modal-border);
+  border-radius: 2px;
+
+  transition: border-color var(--duration-timing-function);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  fill: var(--modal-svg-fill);
+
+  transition: fill var(--duration-timing-function);
+}
+
+.modal-form-item:focus-within > .modal-form-icon {
+  fill: var(--accent-color);
+}
+
+/* ----------------------form-comment------------------------ */
+.comment {
+  max-height: 138px;
+  margin-bottom: 20px;
+}
+
+.comment-label {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.01em;
+}
+
+.comment-textarea {
+  width: 100%;
+  max-height: 120px;
+
+  padding: 12px 16px 12px 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  resize: none;
+  border: 1px solid var(--modal-border);
+  border-radius: 4px;
+}
+
+/* ----------------checkbox + button------------ */
+.checkbox {
+  margin-bottom: 30px;
+  margin-left: 12px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+}
+
+/* visually-hidden - декоративного оформления */
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox .icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+}
+
+.icon-thumb .icon {
+  fill: transparent;
+  border: 1px solid var(--modal-svg-fill);
+  border-radius: 2px;
+}
+
+.checkbox-input:checked + .checkbox-label .icon {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.checkbox-link {
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
 /* --------------------SECTION-2------------------- */
 /* применение ЗАГОЛОВКА к однотипным секциям, в которых одинаковый цвет заголовка */
 .feature {
@@ -432,6 +596,11 @@ h3 {
   line-height: 1.71;
 
   color: var(--primary-text-color);
+}
+
+.modal-button {
+  padding-left: 52px;
+  padding-right: 52px;
 }
 
 /* --------------------SECTION-3------------------- */
