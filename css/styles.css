@@ -67,6 +67,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -335,6 +339,8 @@ h3 {
 
   opacity: 1;
   transition: opacity var(--duration-timing-function), visibility var(--duration-timing-function);
+
+  z-index: 2;
 }
 
 .backdrop.is-hidden {
@@ -350,7 +356,7 @@ h3 {
   transform: translate(-50%, -50%);
 
   width: 528px;
-  min-height: 581px;
+  max-height: 581px;
 
   /* margin-left: auto;
   margin-right: auto; */
@@ -364,8 +370,8 @@ h3 {
 
 .modal .button-close {
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 8px;
+  top: 8px;
 
   width: 30px;
   height: 30px;
@@ -386,8 +392,9 @@ h3 {
 .button-close .icon {
   transition: fill var(--duration-timing-function);
 }
-.button-close .icon:hover,
-.button-close .icon:focus {
+
+.button-close:hover .icon,
+.button-close:focus .icon {
   fill: var(--accent-color);
 }
 
@@ -478,19 +485,21 @@ h3 {
 
   padding: 12px 16px 12px 16px;
 
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
   color: var(--title-text-color);
 
   resize: none;
   border: 1px solid var(--modal-border);
   border-radius: 4px;
   outline: none;
+
+  transition: border-color var(--duration-timing-function);
 }
 
 /* Цвет самой надписи - placeholder */
 .comment-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
   /* -webkit-input-placeholdercolor: rgba(117, 117, 117, 0.5);
   -moz-placeholdercolor: rgba(117, 117, 117, 0.5);
@@ -499,10 +508,15 @@ h3 {
   -ms-input-placeholdercolor: rgba(117, 117, 117, 0.5); */
 }
 
+.comment-textarea:focus {
+  border-color: var(--accent-color);
+}
+
 /* ----------------checkbox + button------------ */
 .checkbox {
+  max-width: 423px;
   margin-bottom: 30px;
-  margin-left: 12px;
+  padding-left: 12px;
 
   font-size: 14px;
   line-height: 1.71;
@@ -543,6 +557,11 @@ h3 {
   border-radius: 2px;
 }
 
+.icon-thumb .icon:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
 .checkbox-input:checked + .checkbox-label .icon {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -550,6 +569,8 @@ h3 {
 }
 
 .checkbox-link {
+  margin-left: 5px;
+
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
@@ -775,9 +796,12 @@ h3 {
   color: var(--secondary-text-color);
 }
 
+.address {
+  margin-top: 20px;
+}
+
 .address-list {
   min-width: 231px;
-  margin-top: 20px;
 }
 
 .city-item {
@@ -859,16 +883,21 @@ h3 {
 .sign-up-input {
   min-width: 358px;
   height: 50px;
+
   padding-left: 16px;
   margin-top: 20px;
   margin-bottom: auto;
+
   letter-spacing: 0.03em;
   line-height: 1.25px;
   color: var(--secondary-text-color);
+
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  transition: color var(--duration-timing-function);
 }
 
 .sign-up-input::placeholder {
@@ -877,9 +906,7 @@ h3 {
 
 .sign-up-input:focus {
   outline: none;
-  border: 1px solid var(--modal-border);
-  color: var(--title-text-color);
-  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
 }
 
 .sign-up-button {
@@ -889,9 +916,9 @@ h3 {
 
   display: flex;
   align-items: center;
+
   /* margin-left: 12px;
   margin-right: auto; */
-
   margin-top: auto;
   padding-left: 29px;
   padding-right: 62px;
