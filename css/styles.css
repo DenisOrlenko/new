@@ -555,6 +555,8 @@ h3 {
   fill: transparent;
   border: 1px solid var(--modal-svg-fill);
   border-radius: 2px;
+
+  transition: border-color var(--duration-timing-function);
 }
 
 .icon-thumb .icon:focus {
