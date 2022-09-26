@@ -1,2 +1,48 @@
-/* footer-contacts */
+.address {
+  margin-top: 20px;
+}
 
+.address__list {
+  min-width: 231px;
+}
+
+.address__city-item {
+  margin-bottom: 6px;
+}
+
+.address__city-link {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+
+  color: var(--secondary-text-color);
+
+  transition: color var(--duration-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address__mail-item {
+  margin-bottom: 9px;
+}
+
+/* phone - оформление */
+.address__mail-link,
+.address__phone-link {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--footer-text-color);
+
+  transition: color var(--duration-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

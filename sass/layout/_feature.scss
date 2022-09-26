@@ -1,0 +1,40 @@
+.feature {
+  padding-bottom: 47px;
+}
+
+.feature__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature__item {
+  width: 270px;
+}
+
+.feature__icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-color);
+
+  border-radius: 4px;
+}
+
+/* h3 оформление-1 */
+.feature__subtitle {
+  color: var(--title-text-color);
+}
+
+/* p - оформление-1 */
+.feature__text {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--primary-text-color);
+}

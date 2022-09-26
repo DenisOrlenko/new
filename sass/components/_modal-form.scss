@@ -1,0 +1,101 @@
+.modal-form__list {
+  margin-bottom: 10px;
+}
+
+.modal-form__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal-form__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.modal-form__input {
+  padding: 10px 12px 10px 42px;
+  width: 100%;
+
+  /* margin-top: 4px; */
+
+  border: 1px solid var(--modal-border);
+  border-radius: 2px;
+
+  transition: border-color var(--duration-timing-function);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+.modal-form__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  fill: var(--modal-svg-fill);
+
+  transition: fill var(--duration-timing-function);
+
+  .modal-form__item:focus-within > & {
+    fill: var(--accent-color);
+  }
+}
+
+/* ----------------------form-comment------------------------ */
+.comment {
+  max-height: 138px;
+  margin-bottom: 20px;
+}
+
+.comment__label {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.01em;
+}
+
+.comment__textarea {
+  width: 100%;
+  max-height: 120px;
+
+  padding: 12px 16px 12px 16px;
+
+  color: var(--title-text-color);
+
+  resize: none;
+  border: 1px solid var(--modal-border);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color var(--duration-timing-function);
+
+  /* Цвет самой надписи - placeholder */
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.modal__button {
+  padding-left: 52px;
+  padding-right: 52px;
+}

@@ -1,0 +1,33 @@
+.contact {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+}
+
+/* задается цвет списку контактов в шапке */
+.contact__link {
+  display: flex;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
+  transition: color var(--duration-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contact__icon {
+  margin-right: 10px;
+
+  fill: currentColor;
+}

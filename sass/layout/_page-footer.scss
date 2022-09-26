@@ -1,0 +1,22 @@
+/* фон - футер */
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--footer-bg-color);
+}
+
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer__social-thumb {
+  margin-left: 70px;
+}
+
+.social-thumb__title {
+  margin-bottom: 20px;
+
+  color: var(--secondary-text-color);
+}

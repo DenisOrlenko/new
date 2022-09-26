@@ -1,31 +1,29 @@
 @import './utils/variables';
+@import './utils/mixins';
 
 @import './layout/page-header';
 @import './components/logo';
-@import './components/button-menu';
 @import './components/site-nav';
 @import './components/contact';
-@import './components/social-mobile';
-@import './layout/menu-container';
 
 @import './layout/hero';
 @import './components/button';
-@import './components/backdrop';
 @import './components/modal';
 @import './components/modal-form';
+@import './components/checkbox';
 @import './components/button-close';
 
 @import './layout/feature';
+@import './components/subtitle';
 
 @import './layout/version';
 @import './components/section-title';
 
-@import './layout/masters';
-@import './components/social-main';
+@import './layout/team';
+@import './components/socials';
 
 @import './layout/clients';
 
 @import './layout/page-footer';
 @import './components/address';
-@import './components/social-footer';
-@import './components/sign-up-field';
+@import './components/sign-up';

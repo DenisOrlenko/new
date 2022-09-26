@@ -1,0 +1,42 @@
+.directions__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.directions__list .directions__item + .directions__item {
+  margin-left: 8px;
+}
+
+/* button применение формления к кнопке */
+.directions__button {
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: inherit;
+
+  color: var(--title-text-color);
+  background-color: var(--secondary-bg-color);
+
+  border-radius: 4px;
+  cursor: pointer;
+  border-style: none;
+
+  transition: color var(--duration-timing-function),
+    background-color var(--duration-timing-function), box-shadow var(--duration-timing-function);
+
+  .directions__item:first-child > & {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+
+    box-shadow: var(--shadow-portfolio-button);
+  }
+}

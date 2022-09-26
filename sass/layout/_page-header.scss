@@ -1,0 +1,22 @@
+.page-header {
+  position: relative;
+
+  /* Серая линия под HEADER - absolute */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid var(--border-under-header);
+    width: 100%;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__main-nav {
+  display: flex;
+  align-items: center;
+}

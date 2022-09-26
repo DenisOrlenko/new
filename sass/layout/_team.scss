@@ -1,0 +1,42 @@
+/* фон к section */
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+.team__list {
+  display: flex;
+  gap: var(--list-gap);
+}
+
+/* фон к элементу списка */
+.team-item {
+  background-color: var(--secondary-text-color);
+
+  box-shadow: var(--shadow-team);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.team-item__content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* h3 оформление -2 */
+.team-item__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+/* p - оформление-2 */
+.team-item__text {
+  margin-bottom: 16px;
+
+  line-height: 1.19;
+  text-align: center;
+
+  color: var(--primary-text-color);
+}

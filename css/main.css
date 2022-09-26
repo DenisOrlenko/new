@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   /* Color */
   --primary-text-color: #757575;
@@ -13,7 +14,6 @@
   --secondary-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
   --backdrop-bg: rgba(0, 0, 0, 0.2);
-
   /* svg */
   --primary-svg-fill: #afb1b8;
   --secondary-svg-fill: #fff;
@@ -34,10 +34,8 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-
   /* transition (css-переходы) */
-  --duration-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  --duration-timing-function: 6250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Geometry */
   /* отступ между элементами списка (кроме меню навигации) */
   --list-gap: 30px;
@@ -45,26 +43,18 @@
 }
 
 /* основной цвет текста (прозрачный) #757575  */
-
 /* вторичный цвет текста (черный) #212121 */
-
 /* третий цвет текста (белый) #ffffff */
-
 /* основной фон (белый)  #ffffff */
-
 /* второй фон (белый с прозрачностью) #f5f4fA (наша команда) */
-
 /* третий фон футера + эффиктивные решения (серый) #2f303a */
-
 /* акцент #2196f3 */
-
 /* кнопка Hero - фон #188CE8 */
-
 /* Добавление в Body: основной цвет и шрифт текста + фон */
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
-  font-family: 'Roboto', 'Raleway', sans-serif;
+  font-family: "Roboto", "Raleway", sans-serif;
   letter-spacing: 0.03em;
 }
 
@@ -128,91 +118,50 @@ img {
   padding-top: 94px;
 }
 
-.section-title {
-  margin-bottom: 50px;
-
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-
-  color: var(--title-text-color);
-}
-
-.button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--secondary-text-color);
-
-  box-shadow: var(--shadow-hero-button);
-  border-radius: 4px;
-  cursor: pointer;
-  border-color: transparent;
-  background-color: var(--accent-color);
-
-  transition: background-color var(--duration-timing-function);
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--button-active-color);
-}
-
-.subtitle {
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-/* -----------------HEADER-------------------------- */
-/* Серая линия под HEADER - relative */
 .page-header {
   position: relative;
+  /* Серая линия под HEADER - absolute */
 }
-
-/* Серая линия под HEADER - absolute */
 .page-header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   border-bottom: 1px solid var(--border-under-header);
   width: 100%;
 }
 
-.page-header .container {
+.page-header__container {
   display: flex;
   align-items: center;
 }
 
-.main-nav {
+.page-header__main-nav {
   display: flex;
   align-items: center;
 }
 
-.page-header .logo {
+/* .logo-web - синий логотип */
+.page-header__logo {
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-/* .logo-web - синий логотип */
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-
   color: var(--accent-color);
 }
 
-/* WebStudio - черный */
+/* Studio - черный цвет */
 .logo__accent--black {
   color: var(--logo-black-color);
+}
+
+/* Studio - белый цвет */
+.logo__accent--white {
+  color: var(--secondary-text-color);
 }
 
 .site-nav {
@@ -232,39 +181,31 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--title-text-color);
-
   transition: color var(--duration-timing-function);
+  /* site-nav цвет ссылки при наведении */
 }
-
-/* site-nav цвет ссылки при наведении */
-.site-nav__link:hover,
-.site-nav__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
 
 /* current - Позиционирование открытой ссылки на текущей странице - задаю цвет текста*/
 .site-nav__link--current {
   color: var(--accent-color);
+  /* Подчеркивание текущей страницы - absolute */
 }
-
-/* Подчеркивание текущей страницы - absolute */
 .site-nav__link--current::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
-
   width: 100%;
   height: 4px;
-
   background-color: var(--accent-color);
   border-radius: 2px;
 }
@@ -278,33 +219,25 @@ img {
 /* задается цвет списку контактов в шапке */
 .contact__link {
   display: flex;
-
   padding-top: 32px;
   padding-bottom: 32px;
-
   align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-
   transition: color var(--duration-timing-function);
+}
+.contact__link:hover, .contact__link:focus {
+  color: var(--accent-color);
 }
 
 .contact__icon {
   margin-right: 10px;
-
   fill: currentColor;
 }
 
-/* задается цвет подсвечивания ссылки при наведении курсором */
-.contact__link:hover,
-.contact__link:focus {
-  color: var(--accent-color);
-}
-
-/* ------------------HERO-------------------- */
 /* фон Героя */
 .hero {
   max-width: 1600px;
@@ -312,7 +245,7 @@ img {
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(var(--hero-overlay)), url('../images/main/hero/hero-bg.jpg');
+  background-image: linear-gradient(var(--hero-overlay)), url("../images/main/hero/hero-bg.jpg");
   background-color: var(--hero-bg-color);
   background-position: center;
   /* background-repeat: no-repeat;
@@ -325,14 +258,12 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--secondary-text-color);
 }
 
@@ -342,19 +273,35 @@ img {
   padding-right: 32px;
 }
 
-/* ---------------------modal----------------- */
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
+  box-shadow: var(--shadow-hero-button);
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: var(--accent-color);
+  transition: background-color var(--duration-timing-function);
+}
+.button:hover, .button:focus {
+  background-color: var(--button-active-color);
+}
+
 .backdrop {
   position: fixed;
   top: 0;
-
   width: 100vw;
   height: 100vh;
-
   background-color: var(--backdrop-bg);
-
   opacity: 1;
   transition: opacity var(--duration-timing-function), visibility var(--duration-timing-function);
-
   z-index: 2;
 }
 
@@ -369,62 +316,25 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   width: 528px;
   max-height: 581px;
-
   /* margin-left: auto;
   margin-right: auto; */
   padding: 40px;
-
   background-color: var(--primary-bg-color);
-
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
 }
 
-.button-close {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 7px 7px 8px 8px;
-
-  background-color: #ffffff;
-  border-radius: 50%;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.button-close__icon {
-  transition: fill var(--duration-timing-function);
-}
-
-.button-close:hover .button-close__icon,
-.button-close:focus .button-close__icon {
-  fill: var(--accent-color);
-}
-
 .modal__title {
   margin-bottom: 12px;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-
   color: var(--title-text-color);
 }
 
-/* -----------modal-form--------- */
 .modal-form__list {
   margin-bottom: 10px;
 }
@@ -432,7 +342,6 @@ img {
 .modal-form__item {
   position: relative;
 }
-
 .modal-form__item:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -440,7 +349,6 @@ img {
 .modal-form__label {
   display: block;
   margin-bottom: 4px;
-
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -450,15 +358,11 @@ img {
 .modal-form__input {
   padding: 10px 12px 10px 42px;
   width: 100%;
-
   /* margin-top: 4px; */
-
   border: 1px solid var(--modal-border);
   border-radius: 2px;
-
   transition: border-color var(--duration-timing-function);
 }
-
 .modal-form__input:focus {
   outline: none;
   border-color: var(--accent-color);
@@ -468,12 +372,9 @@ img {
   position: absolute;
   left: 12px;
   top: 50%;
-
   fill: var(--modal-svg-fill);
-
   transition: fill var(--duration-timing-function);
 }
-
 .modal-form__item:focus-within > .modal-form__icon {
   fill: var(--accent-color);
 }
@@ -487,52 +388,42 @@ img {
 .comment__label {
   display: inline-block;
   margin-bottom: 4px;
-
   font-size: 12px;
   line-height: 1.17;
-
   letter-spacing: 0.01em;
 }
 
 .comment__textarea {
   width: 100%;
   max-height: 120px;
-
   padding: 12px 16px 12px 16px;
-
   color: var(--title-text-color);
-
   resize: none;
   border: 1px solid var(--modal-border);
   border-radius: 4px;
   outline: none;
-
   transition: border-color var(--duration-timing-function);
+  /* Цвет самой надписи - placeholder */
 }
-
-/* Цвет самой надписи - placeholder */
 .comment__textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  /* -webkit-input-placeholdercolor: rgba(117, 117, 117, 0.5);
-  -moz-placeholdercolor: rgba(117, 117, 117, 0.5);
-
-  -moz-placeholdercolor: rgba(117, 117, 117, 0.5);
-  -ms-input-placeholdercolor: rgba(117, 117, 117, 0.5); */
 }
-
 .comment__textarea:focus {
   border-color: var(--accent-color);
 }
 
-/* ----------------checkbox + button------------ */
+.modal__button {
+  padding-left: 52px;
+  padding-right: 52px;
+}
+
 .checkbox {
   max-width: 423px;
   margin-bottom: 30px;
   padding-left: 12px;
-
   font-size: 14px;
   line-height: 1.71;
   text-align: center;
@@ -559,10 +450,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 16px;
   height: 15px;
-
   margin-right: 7px;
 }
 
@@ -570,15 +459,12 @@ img {
   fill: transparent;
   border: 1px solid var(--modal-svg-fill);
   border-radius: 2px;
-
   transition: border-color var(--duration-timing-function);
 }
-
 .checkbox__icon:focus {
   outline: none;
   border-color: var(--accent-color);
 }
-
 .checkbox__input:checked + .checkbox__label .checkbox__icon {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -587,18 +473,33 @@ img {
 
 .checkbox__link {
   margin-left: 5px;
-
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 
-.modal__button {
-  padding-left: 52px;
-  padding-right: 52px;
+.button-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 7px 8px 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-/* --------------------SECTION-2------------------- */
-/* применение ЗАГОЛОВКА к однотипным секциям, в которых одинаковый цвет заголовка */
+.button-close__icon {
+  transition: fill var(--duration-timing-function);
+}
+.button-close:hover .button-close__icon, .button-close:focus .button-close__icon {
+  fill: var(--accent-color);
+}
+
 .feature {
   padding-bottom: 47px;
 }
@@ -617,13 +518,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 30px;
-
   background-color: var(--secondary-bg-color);
-
   border-radius: 4px;
 }
 
@@ -636,11 +534,15 @@ img {
 .feature__text {
   font-size: 14px;
   line-height: 1.71;
-
   color: var(--primary-text-color);
 }
 
-/* --------------------SECTION-3------------------- */
+.subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 .versions {
   padding-top: 47px;
 }
@@ -659,19 +561,23 @@ img {
 .versions__subtitle {
   position: absolute;
   bottom: 0;
-
   width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
   margin-bottom: 0;
-
   color: var(--secondary-text-color);
-
   text-align: center;
-
   background-color: rgba(47, 48, 58, 0.8);
 }
-/* --------------------SECTION-4------------------- */
+
+.section-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
 /* фон к section */
 .team {
   background-color: var(--secondary-bg-color);
@@ -685,7 +591,6 @@ img {
 /* фон к элементу списка */
 .team-item {
   background-color: var(--secondary-text-color);
-
   box-shadow: var(--shadow-team);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -695,23 +600,21 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 /* h3 оформление -2 */
 .team-item__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-
   color: var(--title-text-color);
 }
 
 /* p - оформление-2 */
 .team-item__text {
   margin-bottom: 16px;
-
   line-height: 1.19;
   text-align: center;
-
   color: var(--primary-text-color);
 }
 
@@ -727,25 +630,23 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
-
   border-radius: 50%;
 }
-
 .socials__link--main-fill {
   fill: var(--primary-svg-fill);
-
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function);
+  transition: color var(--duration-timing-function), background-color var(--duration-timing-function);
 }
-
-.socials__link:hover,
-.socials__link:focus {
+.socials__link--footer-fill {
+  fill: var(--secondary-svg-fill);
+  background-color: var(--secondary-svg-bg-color);
+  transition: background-color var(--duration-timing-function);
+}
+.socials__link:hover, .socials__link:focus {
   background-color: var(--accent-color);
-  fill: var(--primary-bg-color);
+  fill: var(--secondary-svg-fill);
 }
 
-.socials__link:hover .socials__icon,
-.socials__link:focus .socials__icon {
+.socials__icon {
   transition: background-color var(--duration-timing-function), fill var(--duration-timing-function);
 }
 
@@ -761,33 +662,27 @@ img {
   justify-content: center;
   width: 170px;
   height: 92px;
-
   fill: var(--primary-svg-fill);
-
   border: 1px solid var(--primary-svg-fill);
   border-radius: 4px;
-
-  transition: fill var(--duration-timing-function), border-color var(--duration-timing-function);
+  transition: border-color var(--duration-timing-function);
 }
-
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   fill: var(--accent-color);
-
   border-color: var(--accent-color);
 }
 
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
+.clients__icon {
   transition: fill var(--duration-timing-function);
 }
+.clients__link:hover .clients__icon, .clients__link:focus .clients__icon {
+  fill: var(--accent-color);
+}
 
-/* -----------------------ФУТЕР---------------- */
 /* фон - футер */
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-
   background-color: var(--footer-bg-color);
 }
 
@@ -796,8 +691,12 @@ img {
   align-items: baseline;
 }
 
-/* Studio - белый цвет */
-.logo__accent--white {
+.page-footer__social-thumb {
+  margin-left: 70px;
+}
+
+.social-thumb__title {
+  margin-bottom: 20px;
   color: var(--secondary-text-color);
 }
 
@@ -817,11 +716,11 @@ img {
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
-  /* letter-spacing: inherit; */
-
   color: var(--secondary-text-color);
-
   transition: color var(--duration-timing-function);
+}
+.address__city-link:hover, .address__city-link:focus {
+  color: var(--accent-color);
 }
 
 .address__mail-item {
@@ -835,36 +734,13 @@ img {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: var(--footer-text-color);
-
   transition: color var(--duration-timing-function);
 }
-
-.address__city-link:hover,
-.address__city-link:focus,
-.address__mail-link:hover,
-.address__mail-link:focus,
+.address__mail-link:hover, .address__mail-link:focus,
 .address__phone-link:hover,
 .address__phone-link:focus {
   color: var(--accent-color);
-}
-
-.page-footer__social-thumb {
-  margin-left: 70px;
-}
-
-.social-thumb__title {
-  margin-bottom: 20px;
-
-  color: var(--secondary-text-color);
-}
-
-.socials__link--footer-fill {
-  fill: var(--secondary-text-color);
-  background-color: var(--footer-svg-bg-color);
-
-  transition: background-color var(--duration-timing-function);
 }
 
 .sign-up {
@@ -875,35 +751,28 @@ img {
 .sign-up__label {
   display: block;
   font-weight: 700;
-
   color: var(--secondary-text-color);
 }
 
 .sign-up__input {
   min-width: 358px;
   height: 50px;
-
   padding-left: 16px;
   margin-top: 20px;
   margin-bottom: auto;
-
   font-size: 16px;
   line-height: 1.25px;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-
   transition: color var(--duration-timing-function);
 }
-
 .sign-up__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .sign-up__input:focus {
   outline: none;
   color: var(--secondary-text-color);
@@ -913,10 +782,8 @@ img {
   position: relative;
   width: 200px;
   height: 50px;
-
   display: flex;
   align-items: center;
-
   /* margin-left: 12px;
   margin-right: auto; */
   margin-top: auto;
@@ -929,133 +796,4 @@ img {
   top: 50%;
   right: 28px;
   transform: translateY(-50%);
-}
-/* ------------------------------------------- */
-/* ----------------ПОРТФОЛИО-------------- */
-/* ------------------------------------------- */
-
-.directions__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.directions__list .directions__item + .directions__item {
-  margin-left: 8px;
-}
-
-.directions__item:first-child > .directions__button {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-/* button применение формления к кнопке */
-.directions__button {
-  padding: 6px 22px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: inherit;
-
-  color: var(--title-text-color);
-  background-color: var(--secondary-bg-color);
-
-  border-radius: 4px;
-  cursor: pointer;
-  border-style: none;
-
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function), box-shadow var(--duration-timing-function);
-}
-
-/* Кнопка - наведеие и фокус */
-.directions__button:hover,
-.directions__button:focus {
-  color: var(--secondary-text-color);
-  background-color: var(--accent-color);
-
-  box-shadow: var(--shadow-portfolio-button);
-}
-
-/* ------------Example--------------- */
-.example {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--list-gap);
-}
-
-.example__link {
-  transition: box-shadow var(--duration-timing-function);
-}
-
-.example__link:hover,
-.example__link:focus {
-  display: block;
-  box-shadow: var(--shadow-example);
-}
-
-/* overlay - reative + overflow: hidden - текст выезжает из .example-thumb */
-.example__overlay-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-/* overlay - absolute */
-.example__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-
-  padding: 63px 24px 63px 24px;
-  width: 100%;
-  height: 100%;
-
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  text-align: start;
-  color: var(--secondary-text-color);
-
-  background-color: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function), transform var(--duration-timing-function),
-    opacity var(--duration-timing-function), translateY var(--duration-timing-function);
-}
-
-.example__link:focus .example__overlay,
-.example__link:hover .example__overlay {
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-.example__content {
-  padding: 20px 24px;
-
-  background-color: var(--primary-bg-color);
-
-  border-left: 1px solid var(--border-under-item);
-  border-right: 1px solid var(--border-under-item);
-  border-bottom: 1px solid var(--border-under-item);
-}
-
-.example__title {
-  margin-bottom: 4px;
-
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
-  color: var(--title-text-color);
-}
-
-.example__text {
-  font-size: 16px;
-  line-height: 1.88;
-
-  color: var(--primary-text-color);
-}
+}/*# sourceMappingURL=main.css.map */
