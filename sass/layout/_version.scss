@@ -11,6 +11,8 @@
 /* Позиционирование заголовка с фоном перед изображением - relative */
 .versions__item {
   position: relative;
+
+  width: calc((100% - 2 * var(--list-gap)) / 3);
 }
 
 .versions__subtitle {

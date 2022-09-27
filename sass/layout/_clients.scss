@@ -4,11 +4,14 @@
   gap: var(--list-gap);
 }
 
+.clients__item {
+  width: calc((100% - 5 * var(--list-gap)) / 6);
+}
+
 .clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
   height: 92px;
 
   fill: var(--primary-svg-fill);

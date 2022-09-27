@@ -10,6 +10,8 @@
 
 /* фон к элементу списка */
 .team-item {
+  width: calc((100% - 3 * var(--list-gap)) / 4);
+
   background-color: var(--secondary-text-color);
 
   box-shadow: var(--shadow-team);

@@ -9,7 +9,7 @@
 }
 
 .feature__item {
-  width: 270px;
+  width: calc((100% - 3 * var(--list-gap)) / 4);
 }
 
 .feature__icon-thumb {
