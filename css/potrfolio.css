@@ -54,7 +54,7 @@
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
-  font-family: 'Roboto', 'Raleway', sans-serif;
+  font-family: "Roboto", "Raleway", sans-serif;
   letter-spacing: 0.03em;
 }
 
@@ -123,7 +123,7 @@ img {
   /* Серая линия под HEADER - absolute */
 }
 .page-header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   border-bottom: 1px solid var(--border-under-header);
@@ -147,7 +147,7 @@ img {
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -189,8 +189,7 @@ img {
   transition: color var(--duration-timing-function);
   /* site-nav цвет ссылки при наведении */
 }
-.site-nav__link:hover,
-.site-nav__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -200,7 +199,7 @@ img {
   /* Подчеркивание текущей страницы - absolute */
 }
 .site-nav__link--current::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -230,8 +229,7 @@ img {
   color: var(--primary-text-color);
   transition: color var(--duration-timing-function);
 }
-.contact__link:hover,
-.contact__link:focus {
+.contact__link:hover, .contact__link:focus {
   color: var(--accent-color);
 }
 
@@ -262,15 +260,13 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border-style: none;
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function), box-shadow var(--duration-timing-function);
+  transition: color var(--duration-timing-function), background-color var(--duration-timing-function), box-shadow var(--duration-timing-function);
 }
 .directions__item:first-child > .directions__button {
   padding-left: 25px;
   padding-right: 25px;
 }
-.directions__button:hover,
-.directions__button:focus {
+.directions__button:hover, .directions__button:focus {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
   box-shadow: var(--shadow-portfolio-button);
@@ -285,8 +281,7 @@ img {
 .example__link {
   transition: box-shadow var(--duration-timing-function);
 }
-.example__link:hover,
-.example__link:focus {
+.example__link:hover, .example__link:focus {
   display: block;
   box-shadow: var(--shadow-example);
 }
@@ -313,12 +308,9 @@ img {
   color: var(--secondary-text-color);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function), transform var(--duration-timing-function),
-    opacity var(--duration-timing-function), translateY var(--duration-timing-function);
+  transition: color var(--duration-timing-function), background-color var(--duration-timing-function), transform var(--duration-timing-function), opacity var(--duration-timing-function), translateY var(--duration-timing-function);
 }
-.example__link:focus .example__overlay,
-.example__link:hover .example__overlay {
+.example__link:focus .example__overlay, .example__link:hover .example__overlay {
   opacity: 1;
   transform: translateY(0);
 }
@@ -385,8 +377,7 @@ img {
   color: var(--secondary-text-color);
   transition: color var(--duration-timing-function);
 }
-.address__city-link:hover,
-.address__city-link:focus {
+.address__city-link:hover, .address__city-link:focus {
   color: var(--accent-color);
 }
 
@@ -404,11 +395,16 @@ img {
   color: var(--footer-text-color);
   transition: color var(--duration-timing-function);
 }
-.address__mail-link:hover,
-.address__mail-link:focus,
+.address__mail-link:hover, .address__mail-link:focus,
 .address__phone-link:hover,
 .address__phone-link:focus {
   color: var(--accent-color);
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .socials {
@@ -427,16 +423,14 @@ img {
 }
 .socials__link--main-fill {
   fill: var(--primary-svg-fill);
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function);
+  transition: color var(--duration-timing-function), background-color var(--duration-timing-function);
 }
 .socials__link--footer-fill {
   fill: var(--secondary-svg-fill);
   background-color: var(--secondary-svg-bg-color);
   transition: background-color var(--duration-timing-function);
 }
-.socials__link:hover,
-.socials__link:focus {
+.socials__link:hover, .socials__link:focus {
   background-color: var(--accent-color);
   fill: var(--secondary-svg-fill);
 }
@@ -482,10 +476,6 @@ img {
 
 .sign-up__button {
   position: relative;
-  width: 200px;
-  height: 50px;
-  display: flex;
-  align-items: center;
   margin-left: 12px;
   margin-top: auto;
   padding-left: 29px;
@@ -503,8 +493,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-height: 50px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -516,7 +505,6 @@ img {
   background-color: var(--accent-color);
   transition: background-color var(--duration-timing-function);
 }
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background-color: var(--button-active-color);
-} /*# sourceMappingURL=potrfolio.css.map */
+}/*# sourceMappingURL=potrfolio.css.map */

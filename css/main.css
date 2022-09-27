@@ -269,16 +269,14 @@ img {
 
 /* button применение формления к кнопке */
 .hero__button {
-  padding-left: 32px;
-  padding-right: 32px;
+  min-width: 216px;
 }
 
 .button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-height: 50px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -416,8 +414,7 @@ img {
 }
 
 .modal__button {
-  padding-left: 52px;
-  padding-right: 52px;
+  min-width: 200px;
 }
 
 .checkbox {
@@ -785,10 +782,6 @@ img {
 
 .sign-up__button {
   position: relative;
-  width: 200px;
-  height: 50px;
-  display: flex;
-  align-items: center;
   margin-left: 12px;
   margin-top: auto;
   padding-left: 29px;
