@@ -259,7 +259,7 @@ img {
   background-color: var(--secondary-bg-color);
   border-radius: 4px;
   cursor: pointer;
-  border-style: none;
+  border-color: transparent;
   transition: color var(--duration-timing-function), background-color var(--duration-timing-function), box-shadow var(--duration-timing-function);
 }
 .directions__item:first-child > .directions__button {
