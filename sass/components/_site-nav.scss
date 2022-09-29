@@ -16,12 +16,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  color: var(--title-text-color);
+  @include font($fz: 14px, $lh: 1.14, $fw: 500, $ls: 0.02em, $color: var(--title-text-color));
 
   transition: color var(--duration-timing-function);
 

@@ -5,7 +5,6 @@
 
 .sign-up__label {
   display: block;
-  font-weight: 700;
 
   color: var(--secondary-text-color);
 }
@@ -18,10 +17,7 @@
   margin-top: 20px;
   margin-bottom: auto;
 
-  font-size: 16px;
-  line-height: 1.25px;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  @include font($fz: 16px, $lh: 1.25, $fw: 400, $ls: 0.03em, $color: var(--secondary-text-color));
 
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);

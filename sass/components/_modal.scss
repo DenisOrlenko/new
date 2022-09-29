@@ -41,10 +41,5 @@
 .modal__title {
   margin-bottom: 12px;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-
-  color: var(--title-text-color);
+  @include font($fz: 20px, $lh: 1.15, $fw: 700, $ls: 0.03em, $color: var(--title-text-color));
 }

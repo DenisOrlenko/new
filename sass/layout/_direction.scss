@@ -12,12 +12,8 @@
 .directions__button {
   padding: 6px 22px;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: inherit;
+  @include font($fz: 16px, $lh: 1.62, $fw: 500, $ls: 0.03em, $color: var(--title-text-color));
 
-  color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
 
   border-radius: 4px;

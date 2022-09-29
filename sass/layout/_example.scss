@@ -31,11 +31,9 @@
   width: 100%;
   height: 100%;
 
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
+  @include font($fz: 18px, $lh: 1.56, $fw: 400, $ls: 0.03em, $color: var(--secondary-text-color));
+
   text-align: start;
-  color: var(--secondary-text-color);
 
   background-color: rgba(33, 150, 243, 0.9);
 

@@ -118,6 +118,36 @@ img {
   padding-top: 94px;
 }
 
+.address__mail-link,
+.address__phone-link, .address__city-link {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color var(--duration-timing-function);
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
 .page-header {
   position: relative;
   /* Серая линия под HEADER - absolute */
@@ -150,6 +180,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
@@ -181,9 +212,9 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   transition: color var(--duration-timing-function);
@@ -221,12 +252,12 @@ img {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-  align-items: center;
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  align-items: center;
   transition: color var(--duration-timing-function);
 }
 .contact__link:hover, .contact__link:focus {
@@ -255,16 +286,6 @@ img {
 /* h1 Задается цвет заголовку Героя */
 .hero__title {
   width: 696px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--secondary-text-color);
 }
 
 /* button применение формления к кнопке */
@@ -277,8 +298,9 @@ img {
   margin-left: auto;
   margin-right: auto;
   min-height: 50px;
-  font-weight: 700;
+  font-size: 16px;
   line-height: 1.88;
+  font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
   box-shadow: var(--shadow-hero-button);
@@ -326,10 +348,10 @@ img {
 
 .modal__title {
   margin-bottom: 12px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
@@ -349,6 +371,7 @@ img {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
+  font-weight: 400;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
@@ -423,6 +446,9 @@ img {
   padding-left: 12px;
   font-size: 14px;
   line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
   text-align: center;
 }
 
@@ -531,13 +557,9 @@ img {
 .feature__text {
   font-size: 14px;
   line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-
-.subtitle {
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .versions {
@@ -572,8 +594,10 @@ img {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
+  text-align: center;
 }
 
 /* фон к section */
@@ -602,19 +626,23 @@ img {
 
 /* h3 оформление -2 */
 .team-item__title {
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
+  text-align: center;
 }
 
 /* p - оформление-2 */
 .team-item__text {
   margin-bottom: 16px;
+  font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  text-align: center;
 }
 
 .socials {
@@ -715,11 +743,7 @@ img {
 }
 
 .address__city-link {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
   color: var(--secondary-text-color);
-  transition: color var(--duration-timing-function);
 }
 .address__city-link:hover, .address__city-link:focus {
   color: var(--accent-color);
@@ -732,12 +756,7 @@ img {
 /* phone - оформление */
 .address__mail-link,
 .address__phone-link {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--footer-text-color);
-  transition: color var(--duration-timing-function);
 }
 .address__mail-link:hover, .address__mail-link:focus,
 .address__phone-link:hover,
@@ -752,7 +771,6 @@ img {
 
 .sign-up__label {
   display: block;
-  font-weight: 700;
   color: var(--secondary-text-color);
 }
 
@@ -763,7 +781,8 @@ img {
   margin-top: 20px;
   margin-bottom: auto;
   font-size: 16px;
-  line-height: 1.25px;
+  line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   background-color: var(--footer-bg-color);

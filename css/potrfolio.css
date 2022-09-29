@@ -118,6 +118,23 @@ img {
   padding-top: 94px;
 }
 
+.address__mail-link,
+.address__phone-link, .address__city-link {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color var(--duration-timing-function);
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .page-header {
   position: relative;
   /* Серая линия под HEADER - absolute */
@@ -150,6 +167,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
@@ -181,9 +199,9 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   transition: color var(--duration-timing-function);
@@ -221,12 +239,12 @@ img {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-  align-items: center;
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  align-items: center;
   transition: color var(--duration-timing-function);
 }
 .contact__link:hover, .contact__link:focus {
@@ -251,10 +269,10 @@ img {
 /* button применение формления к кнопке */
 .directions__button {
   padding: 6px 22px;
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  letter-spacing: inherit;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   border-radius: 4px;
@@ -303,9 +321,10 @@ img {
   height: 100%;
   font-size: 18px;
   line-height: 1.56;
+  font-weight: 400;
   letter-spacing: 0.03em;
-  text-align: start;
   color: var(--secondary-text-color);
+  text-align: start;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: color var(--duration-timing-function), background-color var(--duration-timing-function), transform var(--duration-timing-function), opacity var(--duration-timing-function), translateY var(--duration-timing-function);
@@ -371,11 +390,7 @@ img {
 }
 
 .address__city-link {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
   color: var(--secondary-text-color);
-  transition: color var(--duration-timing-function);
 }
 .address__city-link:hover, .address__city-link:focus {
   color: var(--accent-color);
@@ -388,23 +403,12 @@ img {
 /* phone - оформление */
 .address__mail-link,
 .address__phone-link {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--footer-text-color);
-  transition: color var(--duration-timing-function);
 }
 .address__mail-link:hover, .address__mail-link:focus,
 .address__phone-link:hover,
 .address__phone-link:focus {
   color: var(--accent-color);
-}
-
-.subtitle {
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .socials {
@@ -446,7 +450,6 @@ img {
 
 .sign-up__label {
   display: block;
-  font-weight: 700;
   color: var(--secondary-text-color);
 }
 
@@ -457,7 +460,8 @@ img {
   margin-top: 20px;
   margin-bottom: auto;
   font-size: 16px;
-  line-height: 1.25px;
+  line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   background-color: var(--footer-bg-color);
@@ -494,8 +498,9 @@ img {
   margin-left: auto;
   margin-right: auto;
   min-height: 50px;
-  font-weight: 700;
+  font-size: 16px;
   line-height: 1.88;
+  font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
   box-shadow: var(--shadow-hero-button);

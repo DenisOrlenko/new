@@ -25,20 +25,16 @@
 }
 /* h3 оформление -2 */
 .team-item__title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
+  @include font($fz: 16px, $lh: 1.19, $fw: 500, $ls: 0.03em, $color: var(--title-text-color));
 
-  color: var(--title-text-color);
+  text-align: center;
 }
 
 /* p - оформление-2 */
 .team-item__text {
   margin-bottom: 16px;
 
-  line-height: 1.19;
-  text-align: center;
+  @include font($fz: 16px, $lh: 1.19, $fw: 400, $ls: 0.03em, $color: var(--primary-text-color));
 
-  color: var(--primary-text-color);
+  text-align: center;
 }
