@@ -53,8 +53,6 @@
 /* кнопка Hero - фон #188CE8 */
 /* Добавление в Body: основной цвет и шрифт текста + фон */
 body {
-  color: var(--primary-text-color);
-  background-color: var(--primary-bg-color);
   font-family: "Roboto", "Raleway", sans-serif;
 }
 
@@ -410,6 +408,7 @@ img {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
+  color: var(--primary-text-color);
   letter-spacing: 0.01em;
 }
 
