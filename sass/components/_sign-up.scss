@@ -20,9 +20,10 @@
   @include font($fz: 16px, $lh: 1.25, $fw: 400, $ls: 0.03em, $color: var(--secondary-text-color));
 
   background-color: var(--footer-bg-color);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include circle-bordered(rgba(255, 255, 255, 0.3), 4px);
+
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
 
   transition: color var(--duration-timing-function);
 

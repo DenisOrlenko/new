@@ -6,16 +6,14 @@
   width: 30px;
   height: 30px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centerFlex();
 
   padding: 7px 7px 8px 8px;
 
   background-color: #ffffff;
-  border-radius: 50%;
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  @include circle-bordered(rgba(0, 0, 0, 0.1), 50%);
+
   cursor: pointer;
 }
 

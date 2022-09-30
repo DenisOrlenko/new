@@ -1,7 +1,6 @@
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
+  @include gapFlex($gap: 50px);
+
   margin-left: 93px;
 }
 

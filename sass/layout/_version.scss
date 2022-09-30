@@ -3,9 +3,7 @@
 }
 
 .versions__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--list-gap);
+  @include gapFlex($gap: var(--list-gap));
 }
 
 /* Позиционирование заголовка с фоном перед изображением - relative */

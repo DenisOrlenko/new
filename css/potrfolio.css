@@ -17,6 +17,7 @@
   /* svg */
   --primary-svg-fill: #afb1b8;
   --secondary-svg-fill: #fff;
+  --primary-svg-bg-color: #fff;
   --secondary-svg-bg-color: rgba(255, 255, 255, 0.1);
   --modal-svg-fill: #212121;
   /* Decoration */
@@ -55,7 +56,6 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
   font-family: "Roboto", "Raleway", sans-serif;
-  letter-spacing: 0.03em;
 }
 
 body.modal-open {
@@ -184,7 +184,6 @@ img {
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 50px;
   margin-left: 93px;
 }
@@ -353,6 +352,7 @@ img {
 .example__text {
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
@@ -419,14 +419,15 @@ img {
 
 .socials__link {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
 }
 .socials__link--main-fill {
   fill: var(--primary-svg-fill);
+  background-color: #fff;
   transition: color var(--duration-timing-function), background-color var(--duration-timing-function);
 }
 .socials__link--footer-fill {
@@ -466,8 +467,8 @@ img {
   color: var(--secondary-text-color);
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   transition: color var(--duration-timing-function);
 }
 .sign-up__input::placeholder {

@@ -26,9 +26,7 @@
 }
 
 .checkbox__icon-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centerFlex();
 
   width: 16px;
   height: 15px;
@@ -38,8 +36,7 @@
 
 .checkbox__icon {
   fill: transparent;
-  border: 1px solid var(--modal-svg-fill);
-  border-radius: 2px;
+  @include circle-bordered(var(--modal-svg-fill), 2px);
 
   transition: border-color var(--duration-timing-function);
 
@@ -58,6 +55,5 @@
 .checkbox__link {
   margin-left: 5px;
 
-  letter-spacing: 0.03em;
   color: var(--accent-color);
 }

@@ -4,8 +4,7 @@
 }
 
 .team__list {
-  display: flex;
-  gap: var(--list-gap);
+  @include gapFlex($gap: var(--list-gap));
 }
 
 /* фон к элементу списка */

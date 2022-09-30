@@ -1,13 +1,12 @@
 .socials {
-  display: flex;
-  gap: 10px;
+  @include gapFlex($gap: 10px);
+
   justify-content: center;
 }
 
 .socials__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centerFlex();
+
   width: 44px;
   height: 44px;
 
@@ -15,6 +14,7 @@
 
   &--main-fill {
     fill: var(--primary-svg-fill);
+    background-color: #fff;
 
     transition: color var(--duration-timing-function),
       background-color var(--duration-timing-function);

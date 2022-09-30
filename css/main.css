@@ -17,6 +17,7 @@
   /* svg */
   --primary-svg-fill: #afb1b8;
   --secondary-svg-fill: #fff;
+  --primary-svg-bg-color: #fff;
   --secondary-svg-bg-color: rgba(255, 255, 255, 0.1);
   --modal-svg-fill: #212121;
   /* Decoration */
@@ -55,7 +56,6 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
   font-family: "Roboto", "Raleway", sans-serif;
-  letter-spacing: 0.03em;
 }
 
 body.modal-open {
@@ -197,7 +197,6 @@ img {
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 50px;
   margin-left: 93px;
 }
@@ -353,6 +352,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  text-align: center;
 }
 
 .modal-form__list {
@@ -379,7 +379,6 @@ img {
 .modal-form__input {
   padding: 10px 12px 10px 42px;
   width: 100%;
-  /* margin-top: 4px; */
   border: 1px solid var(--modal-border);
   border-radius: 2px;
   transition: border-color var(--duration-timing-function);
@@ -418,11 +417,15 @@ img {
   width: 100%;
   max-height: 120px;
   padding: 12px 16px 12px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--title-text-color);
-  resize: none;
   border: 1px solid var(--modal-border);
   border-radius: 4px;
   outline: none;
+  resize: none;
   transition: border-color var(--duration-timing-function);
   /* Цвет самой надписи - placeholder */
 }
@@ -496,7 +499,6 @@ img {
 
 .checkbox__link {
   margin-left: 5px;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 
@@ -511,8 +513,8 @@ img {
   justify-content: center;
   padding: 7px 7px 8px 8px;
   background-color: #ffffff;
-  border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -529,8 +531,7 @@ img {
 
 .feature__list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap: var(--list-gap);
 }
 
 .feature__item {
@@ -568,7 +569,6 @@ img {
 
 .versions__list {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--list-gap);
 }
 
@@ -653,14 +653,15 @@ img {
 
 .socials__link {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
 }
 .socials__link--main-fill {
   fill: var(--primary-svg-fill);
+  background-color: #fff;
   transition: color var(--duration-timing-function), background-color var(--duration-timing-function);
 }
 .socials__link--footer-fill {
@@ -787,8 +788,8 @@ img {
   color: var(--secondary-text-color);
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   transition: color var(--duration-timing-function);
 }
 .sign-up__input::placeholder {

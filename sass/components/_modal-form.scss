@@ -21,10 +21,7 @@
   padding: 10px 12px 10px 42px;
   width: 100%;
 
-  /* margin-top: 4px; */
-
-  border: 1px solid var(--modal-border);
-  border-radius: 2px;
+  @include circle-bordered(var(--modal-border), 2px);
 
   transition: border-color var(--duration-timing-function);
 
@@ -70,12 +67,12 @@
 
   padding: 12px 16px 12px 16px;
 
-  color: var(--title-text-color);
+  @include font($fz: 12px, $lh: 1.17, $fw: 400, $ls: 0.01em, $color: var(--title-text-color));
 
-  resize: none;
-  border: 1px solid var(--modal-border);
-  border-radius: 4px;
+  @include circle-bordered(var(--modal-border), 4px);
+
   outline: none;
+  resize: none;
 
   transition: border-color var(--duration-timing-function);
 

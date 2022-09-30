@@ -1,7 +1,6 @@
 /* client */
 .clients__list {
-  display: flex;
-  gap: var(--list-gap);
+  @include gapFlex($gap: var(--list-gap));
 }
 
 .clients__item {
@@ -9,15 +8,13 @@
 }
 
 .clients__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centerFlex();
+
   height: 92px;
 
   fill: var(--primary-svg-fill);
 
-  border: 1px solid var(--primary-svg-fill);
-  border-radius: 4px;
+  @include circle-bordered(var(--primary-svg-fill), 4px);
 
   transition: border-color var(--duration-timing-function);
 

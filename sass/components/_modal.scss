@@ -42,4 +42,5 @@
   margin-bottom: 12px;
 
   @include font($fz: 20px, $lh: 1.15, $fw: 700, $ls: 0.03em, $color: var(--title-text-color));
+  text-align: center;
 }

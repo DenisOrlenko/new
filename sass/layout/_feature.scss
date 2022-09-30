@@ -3,9 +3,7 @@
 }
 
 .feature__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include gapFlex($gap: var(--list-gap));
 }
 
 .feature__item {
@@ -13,9 +11,7 @@
 }
 
 .feature__icon-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centerFlex();
 
   padding-top: 25px;
   padding-bottom: 25px;

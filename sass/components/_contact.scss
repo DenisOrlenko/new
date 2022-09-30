@@ -1,6 +1,6 @@
 .contact {
-  display: flex;
-  gap: 50px;
+  @include gapFlex($gap: 50px);
+
   margin-left: auto;
 }
 
