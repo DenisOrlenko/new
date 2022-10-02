@@ -17,6 +17,7 @@
   /* svg */
   --primary-svg-fill: #afb1b8;
   --secondary-svg-fill: #fff;
+  --primary-svg-bg-color: #fff;
   --secondary-svg-bg-color: rgba(255, 255, 255, 0.1);
   --modal-svg-fill: #212121;
   /* Decoration */
@@ -35,7 +36,7 @@
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   /* transition (css-переходы) */
-  --duration-timing-function: 6250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Geometry */
   /* отступ между элементами списка (кроме меню навигации) */
   --list-gap: 30px;
@@ -50,49 +51,6 @@
 /* третий фон футера + эффиктивные решения (серый) #2f303a */
 /* акцент #2196f3 */
 /* кнопка Hero - фон #188CE8 */
-/* Добавление в Body: основной цвет и шрифт текста + фон */
-body {
-  color: var(--primary-text-color);
-  background-color: var(--primary-bg-color);
-  font-family: "Roboto", "Raleway", sans-serif;
-  letter-spacing: 0.03em;
-}
-
-body.modal-open {
-  overflow: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-p,
-pre {
-  padding: 0;
-  margin: 0;
-}
-
-h3 {
-  margin-bottom: 10px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* .list Убираем маркеры с нужных нам списков */
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -150,6 +108,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
@@ -166,7 +125,6 @@ img {
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 50px;
   margin-left: 93px;
 }
@@ -181,9 +139,9 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   transition: color var(--duration-timing-function);
@@ -221,12 +179,12 @@ img {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-  align-items: center;
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  align-items: center;
   transition: color var(--duration-timing-function);
 }
 .contact__link:hover, .contact__link:focus {
