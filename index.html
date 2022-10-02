@@ -497,12 +497,12 @@
             placeholder="Введіть текст"></textarea>
         </div>
 
-        <!--disabled(не работает) или tabindex=-1 чтоб TAB не фокусировал єлемент (input)-->
+        <!-- disabled(не работает) или tabindex=-1 чтоб TAB не фокусировал єлемент (input): <input tabindex=-1 class="checkbox__input"  <svg tabindex=0 class="checkbox__icon" -->
         <div class="checkbox">
-          <input tabindex=-1 class="checkbox__input" name="agree-checkbox-new" type="checkbox" id="agree-checkbox-new">
+          <input class="checkbox__input" name="agree-checkbox-new" type="checkbox" id="agree-checkbox-new">
           <label class="checkbox__label" for="agree-checkbox-new">
             <span class="checkbox__icon-thumb">
-              <svg tabindex=0 class="checkbox__icon" width="16" height="15">
+              <svg class="checkbox__icon" width="16" height="15">
                 <use href="./images/sprite.svg#icon-checkbox"></use>
               </svg>
             </span>Погоджуюся з розсилкою та приймаю

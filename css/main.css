@@ -482,14 +482,13 @@ img {
   border-radius: 2px;
   transition: border-color var(--duration-timing-function);
 }
-.checkbox__icon:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
 .checkbox__input:checked + .checkbox__label .checkbox__icon {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
+}
+.checkbox__input:focus + .checkbox__label .checkbox__icon {
+  border-color: var(--accent-color);
 }
 
 .checkbox__link {

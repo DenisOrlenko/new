@@ -40,15 +40,14 @@
 
   transition: border-color var(--duration-timing-function);
 
-  &:focus {
-    outline: none;
-    border-color: var(--accent-color);
-  }
-
   .checkbox__input:checked + .checkbox__label & {
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
     background-color: var(--accent-color);
+  }
+
+  .checkbox__input:focus + .checkbox__label & {
+    border-color: var(--accent-color);
   }
 }
 
