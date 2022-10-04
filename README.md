@@ -1,3 +1,3 @@
-# goit-markup-hw-05
+# goit-markup-hw-07
 
-# позиционирование + css-преходы
+# BEM + SASS
