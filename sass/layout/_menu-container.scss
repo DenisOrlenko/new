@@ -1,0 +1,42 @@
+.mobile__nav {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+// .mobile__nav-item {
+// }
+
+.mobile__nav-link {
+  display: block;
+
+  @include font($fz: 40px, $lh: 1.18, $fw: 500, $ls: 0.02em, $color: var(--title-text-color));
+
+  transition: color var(--duration-timing-function);
+
+  /* site-nav цвет ссылки при наведении */
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile__contact-list {
+  margin-bottom: 64px;
+}
+
+.mobile__contact-item:first-child {
+  margin-bottom: 32px;
+}
+
+.mobile__contact-link {
+  @include font($fz: 24px, $lh: 1.17, $fw: 500, $ls: 0.02em, $color: var(--primary-text-color));
+
+  .mobile__contact-item:first-child > & {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}

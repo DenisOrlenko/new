@@ -1,27 +1,45 @@
-.button-close {
+// .button-close {
+// }
+
+.modal__button-close {
   position: absolute;
   right: 8px;
   top: 8px;
 
+  @include centerFlex();
+
   width: 30px;
   height: 30px;
 
-  @include centerFlex();
-
   padding: 7px 7px 8px 8px;
 
-  background-color: #ffffff;
+  background-color: var(--primary-svg-bg-color);
 
   @include circle-bordered(rgba(0, 0, 0, 0.1), 50%);
-
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  &__icon {
+    transition: fill var(--duration-timing-function);
+  }
 }
 
-.button-close__icon {
-  transition: fill var(--duration-timing-function);
+.menu-container__button-close {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 
-  .button-close:hover &,
-  .button-close:focus & {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &:focus {
     fill: var(--accent-color);
   }
 }

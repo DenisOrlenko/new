@@ -1,20 +1,34 @@
 /* .logo-web - синий логотип */
 .page-header__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include font($fz: 26px, $lh: 1.19, $fw: 700, $ls: 0.03em, $color: var(--accent-color));
-}
+  @include font($fz: 24px, $lh: null, $fw: 700, $ls: 0.03em, $color: var(--accent-color));
 
-/* Studio - черный цвет */
-.logo__accent--black {
-  color: var(--logo-black-color);
-}
+  @media screen and (min-width: 1200px) {
+    @include font($fz: 26px, $lh: 1.19, $fw: 700, $ls: 0.03em, $color: var(--accent-color));
+  }
 
-/* Studio - белый цвет */
-.logo__accent--white {
-  color: var(--secondary-text-color);
+  /* Studio - черный цвет */
+  &__accent--black {
+    color: var(--logo-black-color);
+  }
+
+  /* Studio - белый цвет */
+  &__accent--white {
+    color: var(--secondary-text-color);
+  }
 }

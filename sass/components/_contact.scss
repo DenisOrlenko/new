@@ -1,21 +1,40 @@
-.contact {
-  @include gapFlex($gap: 50px);
+.contact__list {
+  @media screen and (max: 767px) {
+    display: none;
+  }
 
-  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include gapFlex($gap: 30px);
+    align-items: center;
+  }
+}
+
+.contact__item:first-child {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
 }
 
 /* задается цвет списку контактов в шапке */
 .contact__link {
   display: flex;
-
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  @include font($fz: 14px, $lh: 1.14, $fw: 500, $ls: 0.02em, $color: var(--primary-text-color));
-
   align-items: center;
 
+  @include font($fz: 12px, $lh: 1.17, $fw: 500, $ls: 0.02em, $color: var(--primary-text-color));
+
   transition: color var(--duration-timing-function);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:hover,
   &:focus {
@@ -24,7 +43,7 @@
 }
 
 .contact__icon {
-  margin-right: 10px;
+  margin-right: 8px;
 
   fill: currentColor;
 }

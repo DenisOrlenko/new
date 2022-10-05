@@ -14,10 +14,18 @@
   gap: $gap;
 }
 
-@mixin font($fz: 14px, $lh: 1.14, $fw: 400, $ls: 0.01em, $color: var(--title-text-color)) {
+@mixin font($fz: 14px, $lh: null, $fw: 400, $ls: 0.01em, $color: var(--title-text-color)) {
   font-size: $fz;
   line-height: $lh;
   font-weight: $fw;
   letter-spacing: $ls;
   color: $color;
+}
+
+@mixin position($position, $top: null, $right: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
