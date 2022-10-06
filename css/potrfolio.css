@@ -137,6 +137,7 @@ img {
   text-transform: uppercase;
 }
 
+/* Серая линия под HEADER - relative */
 .page-header {
   position: relative;
   /* Серая линия под HEADER - absolute */
@@ -154,6 +155,7 @@ img {
 .page-header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -165,6 +167,7 @@ img {
 
 /* .logo-web - синий логотип */
 .page-header__logo {
+  display: block;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -184,6 +187,7 @@ img {
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
+  line-height: 1.17;
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--accent-color);
@@ -194,9 +198,6 @@ img {
   .logo {
     font-size: 26px;
     line-height: 1.19;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    color: var(--accent-color);
   }
 }
 .logo__accent--black {
@@ -215,12 +216,12 @@ img {
   .site-nav {
     display: flex;
     gap: 50px;
-    margin-left: 87px;
+    margin-left: 88px;
   }
 }
 @media screen and (min-width: 1200px) {
   .site-nav {
-    margin-left: 92px;
+    margin-left: 93px;
   }
 }
 
@@ -233,16 +234,20 @@ img {
 
 /* site-nav цвет списка ссылок */
 .site-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  transition: color var(--duration-timing-function);
   /* site-nav цвет ссылки при наведении */
+}
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    transition: color var(--duration-timing-function);
+  }
 }
 .site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
@@ -266,7 +271,7 @@ img {
   z-index: 1;
 }
 
-@media screen and (max: 767px) {
+@media screen and (max-width: 767px) {
   .contact__list {
     display: none;
   }
@@ -318,6 +323,17 @@ img {
   fill: currentColor;
 }
 
+.button-menu {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
 @media screen and (max-width: 767px) {
   .button-menu:hover, .button-menu:focus {
     fill: var(--accent-color);

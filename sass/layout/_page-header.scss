@@ -1,3 +1,4 @@
+/* Серая линия под HEADER - relative */
 .page-header {
   position: relative;
 
@@ -17,6 +18,7 @@
 .page-header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .page-header__main-nav {

@@ -5,11 +5,11 @@
 
   @media screen and (min-width: 768px) {
     @include gapFlex($gap: 50px);
-    margin-left: 87px;
+    margin-left: 88px;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-left: 92px;
+    margin-left: 93px;
   }
 }
 
@@ -22,14 +22,16 @@
 
 /* site-nav цвет списка ссылок */
 .site-nav__link {
-  display: block;
+  @media screen and (min-width: 768px) {
+    display: block;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-  @include font($fz: 14px, $lh: 1.14, $fw: 500, $ls: 0.02em, $color: var(--title-text-color));
+    @include font($fz: 14px, $lh: 1.14, $fw: 500, $ls: 0.02em, $color: var(--title-text-color));
 
-  transition: color var(--duration-timing-function);
+    transition: color var(--duration-timing-function);
+  }
 
   /* site-nav цвет ссылки при наведении */
   &:hover,
