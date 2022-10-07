@@ -33,7 +33,6 @@
     transition: color var(--duration-timing-function);
   }
 
-  /* site-nav цвет ссылки при наведении */
   &:hover,
   &:focus {
     color: var(--accent-color);
