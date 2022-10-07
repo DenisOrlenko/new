@@ -63,6 +63,11 @@ img {
   }
 }
 
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -126,11 +131,6 @@ img {
 /* третий фон футера + эффиктивные решения (серый) #2f303a */
 /* акцент #2196f3 */
 /* кнопка Hero - фон #188CE8 */
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-
 .address__mail-link,
 .address__phone-link, .address__city-link {
   font-size: 14px;
@@ -148,17 +148,22 @@ img {
   text-transform: uppercase;
 }
 
-.hero__title {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.versions__subtitle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
   color: var(--secondary-text-color);
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.team-item {
+  background-color: var(--secondary-text-color);
+  box-shadow: var(--shadow-team);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .checkbox__input {
@@ -432,7 +437,28 @@ img {
 
 /* h1 Задается цвет заголовку Героя */
 .hero__title {
-  width: 696px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+  }
 }
 
 /* button применение формления к кнопке */
@@ -678,13 +704,27 @@ img {
   padding-bottom: 47px;
 }
 
-.feature__list {
-  display: flex;
-  gap: var(--list-gap);
+@media screen and (min-width: 768px) {
+  .feature__list {
+    display: flex;
+    gap: var(--list-gap);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .feature__list {
+    flex-wrap: wrap;
+  }
 }
 
-.feature__item {
-  width: calc((100% - 3 * var(--list-gap)) / 4);
+@media screen and (min-width: 768px) {
+  .feature__item {
+    width: calc((100% - var(--list-gap)) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__item {
+    width: calc((100% - 3 * var(--list-gap)) / 4);
+  }
 }
 
 .feature__icon-thumb {
@@ -713,30 +753,30 @@ img {
   color: var(--primary-text-color);
 }
 
-.versions {
-  padding-top: 47px;
+@media screen and (max-width: 1199px) {
+  .versions {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .versions {
+    padding-top: 47px;
+  }
 }
 
-.versions__list {
-  display: flex;
-  gap: var(--list-gap);
+@media screen and (min-width: 1200px) {
+  .versions__list {
+    display: flex;
+    gap: var(--list-gap);
+  }
 }
 
 /* Позиционирование заголовка с фоном перед изображением - relative */
-.versions__item {
-  position: relative;
-  width: calc((100% - 2 * var(--list-gap)) / 3);
-}
-
-.versions__subtitle {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  color: var(--secondary-text-color);
-  text-align: center;
-  background-color: rgba(47, 48, 58, 0.8);
+@media screen and (min-width: 1200px) {
+  .versions__item {
+    position: relative;
+    width: calc((100% - 2 * var(--list-gap)) / 3);
+  }
 }
 
 .section-title {
@@ -754,23 +794,39 @@ img {
   background-color: var(--secondary-bg-color);
 }
 
-.team__list {
-  display: flex;
-  gap: var(--list-gap);
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    gap: var(--list-gap);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .team__list {
+    flex-wrap: wrap;
+  }
 }
 
 /* фон к элементу списка */
-.team-item {
-  width: calc((100% - 3 * var(--list-gap)) / 4);
-  background-color: var(--secondary-text-color);
-  box-shadow: var(--shadow-team);
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - var(--list-gap)) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - 3 * var(--list-gap)) / 4);
+  }
 }
 
 .team-item__content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team-item__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 /* h3 оформление -2 */
@@ -829,13 +885,33 @@ img {
 }
 
 /* client */
-.clients__list {
-  display: flex;
-  gap: var(--list-gap);
+@media screen and (max-width: 767px) {
+  .clients {
+    display: none;
+  }
 }
 
-.clients__item {
-  width: calc((100% - 5 * var(--list-gap)) / 6);
+@media screen and (min-width: 768px) {
+  .clients__list {
+    display: flex;
+    gap: var(--list-gap);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .clients__list {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 2 * var(--list-gap)) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 5 * var(--list-gap)) / 6);
+  }
 }
 
 .clients__link {
@@ -867,9 +943,11 @@ img {
   background-color: var(--footer-bg-color);
 }
 
-.page-footer__container {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 768px) {
+  .page-footer__container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .page-footer__social-thumb {

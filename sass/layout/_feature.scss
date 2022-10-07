@@ -3,11 +3,23 @@
 }
 
 .feature__list {
-  @include gapFlex($gap: var(--list-gap));
+  @media screen and (min-width: 768px) {
+    @include gapFlex($gap: var(--list-gap));
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 
 .feature__item {
-  width: calc((100% - 3 * var(--list-gap)) / 4);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - var(--list-gap)) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 3 * var(--list-gap)) / 4);
+  }
 }
 
 .feature__icon-thumb {

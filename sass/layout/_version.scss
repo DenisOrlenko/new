@@ -1,29 +1,28 @@
 .versions {
-  padding-top: 47px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 47px;
+  }
 }
 
 .versions__list {
-  @include gapFlex($gap: var(--list-gap));
+  @media screen and (min-width: 1200px) {
+    @include gapFlex($gap: var(--list-gap));
+  }
 }
 
 /* Позиционирование заголовка с фоном перед изображением - relative */
 .versions__item {
-  position: relative;
+  @media screen and (min-width: 1200px) {
+    position: relative;
 
-  width: calc((100% - 2 * var(--list-gap)) / 3);
+    width: calc((100% - 2 * var(--list-gap)) / 3);
+  }
 }
 
 .versions__subtitle {
-  position: absolute;
-  bottom: 0;
-
-  width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
-
-  color: var(--secondary-text-color);
-
-  text-align: center;
-
-  background-color: rgba(47, 48, 58, 0.8);
+  @extend %versions__subtitle;
 }

@@ -63,6 +63,22 @@ img {
   }
 }
 
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 :root {
   /* Color */
   --primary-text-color: #757575;
@@ -115,11 +131,6 @@ img {
 /* третий фон футера + эффиктивные решения (серый) #2f303a */
 /* акцент #2196f3 */
 /* кнопка Hero - фон #188CE8 */
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-
 .address__mail-link,
 .address__phone-link, .address__city-link {
   font-size: 14px;
@@ -458,9 +469,11 @@ img {
   background-color: var(--footer-bg-color);
 }
 
-.page-footer__container {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 768px) {
+  .page-footer__container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .page-footer__social-thumb {

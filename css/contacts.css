@@ -115,11 +115,6 @@ img {
 /* третий фон футера + эффиктивные решения (серый) #2f303a */
 /* акцент #2196f3 */
 /* кнопка Hero - фон #188CE8 */
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-
 /* Серая линия под HEADER - relative */
 .page-header {
   position: relative;

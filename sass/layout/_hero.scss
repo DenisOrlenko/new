@@ -50,8 +50,15 @@
 
 /* h1 Задается цвет заголовку Героя */
 .hero__title {
-  width: 696px;
-  @extend %hero-title;
+  max-width: 360px;
+
+  @include hero-title();
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+
+    @include hero-title($font-size: 44px, $line-height: 1.36);
+  }
 }
 
 /* button применение формления к кнопке */
