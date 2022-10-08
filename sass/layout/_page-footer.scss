@@ -6,6 +6,12 @@
   background-color: var(--footer-bg-color);
 }
 
+// .page-footer__logo {
+//   display: block;
+//   margin-bottom: 20px;
+//   text-align: center;
+// }
+
 .page-footer__container {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -13,8 +19,22 @@
   }
 }
 
+.logo-address {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+
+    text-align: center;
+  }
+}
+
 .page-footer__social-thumb {
-  margin-left: 70px;
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .social-thumb__title {
