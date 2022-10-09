@@ -19,11 +19,6 @@
   font-family: 'Raleway', sans-serif;
   @include font($fz: 24px, $lh: 1.17, $fw: 700, $ls: 0.03em, $color: var(--accent-color));
 
-  @media screen and (min-width: 1200px) {
-    font-size: 26px;
-    line-height: 1.19;
-  }
-
   /* Studio - черный цвет */
   &__accent--black {
     color: var(--logo-black-color);
