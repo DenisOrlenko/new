@@ -38,6 +38,30 @@
   box-shadow: var(--shadow-modal);
 }
 
+.modal__button-close {
+  @include position(absolute, $top: 8px, $right: 8px);
+  width: 30px;
+  height: 30px;
+
+  @include centerFlex();
+
+  padding: 7px 7px 8px 8px;
+
+  background-color: var(--primary-svg-bg-color);
+
+  @include circle-bordered(rgba(0, 0, 0, 0.1), 50%);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  &__icon {
+    transition: fill var(--duration-timing-function);
+  }
+}
+
 .modal__title {
   margin-bottom: 12px;
 

@@ -1,14 +1,48 @@
-.mobile__nav {
-  @media screen and (max-width: 767px) {
-    display: flex;
-    gap: 32px;
-    flex-direction: column;
-    align-items: start;
+.menu-container {
+  @include position(fixed, 0);
+  width: 100%;
+  height: 100vh;
+  padding: 48px 83px 48px 40px;
+
+  background-color: var(--primary-bg-color);
+
+  transform: translateX(100%);
+  transition: transform var(--duration-timing-function);
+  // z-index: 1;
+}
+
+.menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  transform: translateX(0);
+}
+
+.menu-container__button-close {
+  @include position(absolute, $top: 10px, $right: 15px);
+
+  width: 40px;
+  height: 40px;
+
+  @include centerFlex();
+  padding: 0;
+
+  background-color: var(--primary-svg-bg-color);
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
   }
 }
 
-// .mobile__nav-item {
-// }
+.mobile__nav {
+  margin-bottom: 302px;
+}
+
+.mobile__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
 
 .mobile__nav-link {
   display: block;
@@ -25,7 +59,7 @@
 }
 
 .mobile__contact-list {
-  margin-bottom: 64px;
+  margin-bottom: auto;
 }
 
 .mobile__contact-item:first-child {
@@ -33,10 +67,42 @@
 }
 
 .mobile__contact-link {
-  @include font($fz: 24px, $lh: 1.17, $fw: 500, $ls: 0.02em, $color: var(--primary-text-color));
+  display: block;
+
+  @include font($fz: 24px, $lh: 1.18, $fw: 500, $ls: 0.02em, $color: var(--primary-text-color));
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 
   .mobile__contact-item:first-child > & {
-    font-size: 24px;
-    line-height: 1.17;
+    font-size: 34px;
   }
+}
+
+.mobile__social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.mobile__social-link {
+  display: inline-flex;
+
+  @include font($fz: 18px, $lh: 1.22, $fw: 500, $ls: 0.02em, $color: var(--accent-color));
+}
+
+.mobile__social-item:not(:last-child) .mobile__social-link::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+
+  margin-left: 10px;
+
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mobile__social-list {
+  display: flex;
 }

@@ -48,7 +48,7 @@
   color: $color;
 }
 
-@mixin position($position, $top: null, $right: null) {
+@mixin position($position, $top: null, $bottom: null, $left: null, $right: null) {
   position: $position;
   top: $top;
   right: $right;

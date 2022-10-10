@@ -1,29 +1,17 @@
 .button-menu {
+  @include centerFlex();
   padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border-color: transparent;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   width: 40px;
   height: 40px;
-  // min-height: 40px;
-  // min-width: 40px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // margin: 0;
-  // border-radius: 50%;
-  // outline: none;
 
-  @media screen and (max-width: 767px) {
-    &:hover,
-    &:focus {
-      fill: var(--accent-color);
-    }
+  background-color: var(--primary-svg-bg-color);
+  border-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
   }
 
   @media screen and (min-width: 768px) {
@@ -32,8 +20,6 @@
 
   // icon-menu
   &__icon {
-    @media screen and (max-width: 767px) {
-      display: flex;
-    }
+    display: flex;
   }
 }
