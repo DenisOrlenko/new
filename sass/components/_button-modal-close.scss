@@ -1,0 +1,22 @@
+.modal__button-close {
+  @include position(absolute, $top: 8px, $right: 8px);
+  width: 30px;
+  height: 30px;
+
+  @include centerFlex();
+  padding: 0;
+
+  background-color: var(--primary-svg-bg-color);
+
+  @include circle-bordered(rgba(0, 0, 0, 0.1), 50%);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  &__icon {
+    transition: fill var(--duration-timing-function);
+  }
+}

@@ -177,6 +177,12 @@ img {
   overflow: hidden;
 }
 
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Серая линия под HEADER - relative */
 .page-header {
   position: relative;
@@ -377,23 +383,6 @@ img {
   display: flex;
 }
 
-.menu-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  padding: 48px 83px 48px 40px;
-  background-color: var(--primary-bg-color);
-  transform: translateX(100%);
-  transition: transform var(--duration-timing-function);
-}
-
-.menu-container.is-open {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(0);
-}
-
 .menu-container__button-close {
   position: absolute;
   top: 10px;
@@ -409,6 +398,23 @@ img {
 }
 .menu-container__button-close:hover, .menu-container__button-close:focus {
   fill: var(--accent-color);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 83px 48px 40px;
+  background-color: var(--primary-bg-color);
+  transform: translateX(100%);
+  transition: transform var(--duration-timing-function);
+}
+
+.menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
 }
 
 .mobile__nav {
@@ -479,10 +485,6 @@ img {
   background-color: rgba(33, 33, 33, 0.2);
 }
 
-.mobile__social-list {
-  display: flex;
-}
-
 /* фон Героя */
 .hero {
   max-width: 1600px;
@@ -492,9 +494,6 @@ img {
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main/mobile-img/hero-bg/hero-bg-mobile.jpg");
   background-color: var(--hero-bg-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -535,6 +534,8 @@ img {
   margin-right: auto;
   margin-bottom: 30px;
   font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -547,6 +548,8 @@ img {
     margin-right: auto;
     margin-bottom: 30px;
     font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -599,8 +602,8 @@ img {
 
 .modal {
   position: relative;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
   max-height: 581px;
@@ -612,6 +615,16 @@ img {
   box-shadow: var(--shadow-modal);
 }
 
+.modal__title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  text-align: center;
+}
+
 .modal__button-close {
   position: absolute;
   top: 8px;
@@ -621,7 +634,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 7px 8px 8px;
+  padding: 0;
   background-color: var(--primary-svg-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -632,16 +645,6 @@ img {
 }
 .modal__button-close__icon {
   transition: fill var(--duration-timing-function);
-}
-
-.modal__title {
-  margin-bottom: 12px;
-  font-size: 20px;
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  text-align: center;
 }
 
 .modal-form__list {
@@ -679,8 +682,8 @@ img {
 
 .modal-form__icon {
   position: absolute;
-  left: 12px;
   top: 50%;
+  left: 12px;
   fill: var(--modal-svg-fill);
   transition: fill var(--duration-timing-function);
 }
@@ -707,23 +710,12 @@ img {
   width: 100%;
   max-height: 120px;
   padding: 12px 16px 12px 16px;
-  font-size: 12px;
-  line-height: 1.17;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: var(--title-text-color);
   border: 1px solid var(--modal-border);
   border-radius: 4px;
   outline: none;
   resize: none;
   transition: border-color var(--duration-timing-function);
   /* Цвет самой надписи - placeholder */
-}
-.comment__textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
 }
 .comment__textarea:focus {
   border-color: var(--accent-color);

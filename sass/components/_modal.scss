@@ -1,6 +1,5 @@
 .backdrop {
-  position: fixed;
-  top: 0;
+  @include position(fixed, $top: 0);
 
   width: 100vw;
   height: 100vh;
@@ -20,9 +19,7 @@
 }
 
 .modal {
-  position: relative;
-  left: 50%;
-  top: 50%;
+  @include position(relative, $top: 50%, $left: 50%);
   transform: translate(-50%, -50%);
 
   width: 528px;
@@ -36,30 +33,6 @@
 
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
-}
-
-.modal__button-close {
-  @include position(absolute, $top: 8px, $right: 8px);
-  width: 30px;
-  height: 30px;
-
-  @include centerFlex();
-
-  padding: 7px 7px 8px 8px;
-
-  background-color: var(--primary-svg-bg-color);
-
-  @include circle-bordered(rgba(0, 0, 0, 0.1), 50%);
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
-
-  &__icon {
-    transition: fill var(--duration-timing-function);
-  }
 }
 
 .modal__title {

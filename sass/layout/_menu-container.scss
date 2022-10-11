@@ -18,24 +18,6 @@
   transform: translateX(0);
 }
 
-.menu-container__button-close {
-  @include position(absolute, $top: 10px, $right: 15px);
-
-  width: 40px;
-  height: 40px;
-
-  @include centerFlex();
-  padding: 0;
-
-  background-color: var(--primary-svg-bg-color);
-  border-color: transparent;
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
-}
-
 .mobile__nav {
   margin-bottom: 302px;
 }
@@ -82,8 +64,7 @@
 }
 
 .mobile__social-list {
-  display: flex;
-  gap: 10px;
+  @include gapFlex($gap: 10px);
 }
 
 .mobile__social-link {
@@ -101,8 +82,4 @@
   margin-left: 10px;
 
   background-color: rgba(33, 33, 33, 0.2);
-}
-
-.mobile__social-list {
-  display: flex;
 }

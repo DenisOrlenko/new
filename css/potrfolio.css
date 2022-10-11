@@ -348,14 +348,39 @@ img {
   display: flex;
 }
 
-.directions__list {
+.menu-container__button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  padding: 0;
+  background-color: var(--primary-svg-bg-color);
+  border-color: transparent;
+}
+.menu-container__button-close:hover, .menu-container__button-close:focus {
+  fill: var(--accent-color);
 }
 
-.directions__list .directions__item + .directions__item {
-  margin-left: 8px;
+.directions {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.directions__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .directions__list {
+    margin-bottom: 50px;
+  }
 }
 
 /* button применение формления к кнопке */

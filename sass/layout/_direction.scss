@@ -1,11 +1,17 @@
-.directions__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+.directions {
+  @include padding-vertical(60px, 60px);
 }
 
-.directions__list .directions__item + .directions__item {
-  margin-left: 8px;
+.directions__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 /* button применение формления к кнопке */

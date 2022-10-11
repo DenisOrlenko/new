@@ -29,8 +29,7 @@
   transition: color var(--duration-timing-function);
 
   @media screen and (min-width: 1200px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @include padding-vertical(32px, 32px);
 
     font-size: 14px;
     line-height: 1.14;

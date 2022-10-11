@@ -60,8 +60,6 @@
 }
 
 .sign-up__icon {
-  position: absolute;
-  top: 50%;
-  right: 28px;
+  @include position(absolute, $top: 50%, $right: 28px);
   transform: translateY(-50%);
 }

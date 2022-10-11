@@ -1,0 +1,17 @@
+.menu-container__button-close {
+  @include position(absolute, $top: 10px, $right: 15px);
+
+  width: 40px;
+  height: 40px;
+
+  @include centerFlex();
+  padding: 0;
+
+  background-color: var(--primary-svg-bg-color);
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
