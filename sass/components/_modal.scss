@@ -22,8 +22,8 @@
   @include position(relative, $top: 50%, $left: 50%);
   transform: translate(-50%, -50%);
 
-  width: 528px;
-  max-height: 581px;
+  max-width: 450px;
+  max-height: 609px;
 
   /* margin-left: auto;
   margin-right: auto; */
@@ -33,11 +33,20 @@
 
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    max-height: 581px;
+  }
 }
 
 .modal__title {
   margin-bottom: 12px;
 
-  @include font($fz: 20px, $lh: 1.15, $fw: 700, $ls: 0.03em, $color: var(--title-text-color));
+  @include font($fz: 20px, $lh: 1.5, $fw: 700, $ls: 0.03em, $color: var(--title-text-color));
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }

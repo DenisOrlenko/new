@@ -605,8 +605,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  max-height: 581px;
+  max-width: 450px;
+  max-height: 609px;
   /* margin-left: auto;
   margin-right: auto; */
   padding: 40px;
@@ -614,15 +614,26 @@ img {
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
+}
 
 .modal__title {
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .modal__button-close {
@@ -671,6 +682,7 @@ img {
 .modal-form__input {
   padding: 10px 12px 10px 42px;
   width: 100%;
+  max-height: 40px;
   border: 1px solid var(--modal-border);
   border-radius: 2px;
   transition: border-color var(--duration-timing-function);
@@ -717,6 +729,19 @@ img {
   transition: border-color var(--duration-timing-function);
   /* Цвет самой надписи - placeholder */
 }
+.comment__textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .comment__textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
 .comment__textarea:focus {
   border-color: var(--accent-color);
 }
@@ -729,12 +754,18 @@ img {
   max-width: 423px;
   margin-bottom: 30px;
   padding-left: 12px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 /* visually-hidden - декоративного оформления */
@@ -896,7 +927,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .team-item__content {
-    padding-top: 30px;
     padding-bottom: 30px;
   }
 }
@@ -1127,10 +1157,6 @@ img {
   padding-left: 16px;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1145,6 +1171,10 @@ img {
   }
 }
 .sign-up__input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 .sign-up__input:focus {

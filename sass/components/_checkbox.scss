@@ -3,9 +3,14 @@
   margin-bottom: 30px;
   padding-left: 12px;
 
-  @include font($fz: 14px, $lh: 1.71, $fw: 400, $ls: 0.03em, $color: var(--primary-text-color));
+  @include font($fz: 12px, $lh: 1.17, $fw: 400, $ls: 0.03em, $color: var(--primary-text-color));
 
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 /* visually-hidden - декоративного оформления */

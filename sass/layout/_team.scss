@@ -27,11 +27,9 @@
 }
 
 .team-item__content {
-  padding-top: 30px;
-  padding-bottom: 24px;
+  @include padding-vertical(30px, 24px);
 
   @media screen and (min-width: 1200px) {
-    padding-top: 30px;
     padding-bottom: 30px;
   }
 }
