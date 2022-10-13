@@ -1,7 +1,18 @@
-.example {
+.example__list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--list-gap);
+}
+
+.example__item {
+  // @media screen and (min-width: 768px) {
+  //   width: calc(100% - 30px / 2);
+  // }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+    width: 370px;
+  }
 }
 
 .example__link {

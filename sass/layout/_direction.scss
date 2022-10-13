@@ -4,15 +4,30 @@
 
 .directions__list {
   display: flex;
-  flex-wrap: wrap;
   row-gap: 15px;
   column-gap: 8px;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    max-width: 327px;
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
 }
+
+// .directions__item {
+//   @media screen and (max-width: 767px) {
+//   }
+// }
 
 /* button применение формления к кнопке */
 .directions__button {
@@ -25,6 +40,7 @@
   border-radius: 4px;
   cursor: pointer;
   border-color: transparent;
+  border: 0;
 
   transition: color var(--duration-timing-function),
     background-color var(--duration-timing-function), box-shadow var(--duration-timing-function);
