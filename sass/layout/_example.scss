@@ -25,7 +25,6 @@
 
   &:hover,
   &:focus {
-    display: block;
     box-shadow: var(--shadow-example);
   }
 }
@@ -54,8 +53,7 @@
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: color var(--duration-timing-function),
-    background-color var(--duration-timing-function), transform var(--duration-timing-function),
+  transition: color var(--duration-timing-function), background-color var(--duration-timing-function), transform var(--duration-timing-function),
     opacity var(--duration-timing-function), translateY var(--duration-timing-function);
 
   .example__link:focus &,

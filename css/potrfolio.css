@@ -532,7 +532,6 @@ img {
   }
 }
 .example__link:hover, .example__link:focus {
-  display: block;
   box-shadow: var(--shadow-example);
 }
 
