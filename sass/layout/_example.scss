@@ -1,7 +1,6 @@
 .example__list {
-  display: flex;
+  @include gapFlex();
   flex-wrap: wrap;
-  gap: var(--list-gap);
 }
 
 .example__item {
@@ -37,9 +36,7 @@
 
 /* overlay - absolute */
 .example__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include position(absolute, $top: 0, $left: 0);
   opacity: 0;
 
   padding: 63px 24px 63px 24px;
@@ -81,17 +78,9 @@
 .example__title {
   margin-bottom: 4px;
 
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
-  color: var(--title-text-color);
+  @include font($fz: 20px, $lh: 2, $fw: 700, $ls: 0.06em, $color: var(--title-text-color));
 }
 
 .example__text {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
+  @include font($fz: 16px, $lh: 1.88, $fw: null, $ls: 0.03em, $color: var(--primary-text-color));
 }
